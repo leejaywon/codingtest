@@ -1,0 +1,4093 @@
+{
+  "problems": [
+    {
+      "id": "boj-1260",
+      "source": "boj",
+      "source_id": "1260",
+      "order": 10,
+      "tier": 1,
+      "tags": [
+        "DFS",
+        "BFS"
+      ],
+      "our_types": [
+        "그래프 탐색 (DFS/BFS)"
+      ]
+    },
+    {
+      "id": "boj-2178",
+      "source": "boj",
+      "source_id": "2178",
+      "order": 11,
+      "tier": 1,
+      "tags": [
+        "BFS"
+      ],
+      "our_types": [
+        "그래프 탐색 (DFS/BFS)"
+      ]
+    },
+    {
+      "id": "boj-2606",
+      "source": "boj",
+      "source_id": "2606",
+      "order": 12,
+      "tier": 1,
+      "tags": [
+        "DFS",
+        "BFS"
+      ],
+      "our_types": [
+        "그래프 탐색 (DFS/BFS)"
+      ]
+    },
+    {
+      "id": "boj-2667",
+      "source": "boj",
+      "source_id": "2667",
+      "order": 13,
+      "tier": 1,
+      "tags": [
+        "DFS",
+        "BFS"
+      ],
+      "our_types": [
+        "그래프 탐색 (DFS/BFS)"
+      ]
+    },
+    {
+      "id": "boj-7576",
+      "source": "boj",
+      "source_id": "7576",
+      "order": 14,
+      "tier": 1,
+      "tags": [
+        "BFS"
+      ],
+      "our_types": [
+        "그래프 탐색 (DFS/BFS)"
+      ]
+    },
+    {
+      "id": "boj-1697",
+      "source": "boj",
+      "source_id": "1697",
+      "order": 15,
+      "tier": 1,
+      "tags": [
+        "BFS"
+      ],
+      "our_types": [
+        "그래프 탐색 (DFS/BFS)"
+      ]
+    },
+    {
+      "id": "boj-7569",
+      "source": "boj",
+      "source_id": "7569",
+      "order": 16,
+      "tier": 1,
+      "tags": [
+        "BFS"
+      ],
+      "our_types": [
+        "그래프 탐색 (DFS/BFS)"
+      ]
+    },
+    {
+      "id": "boj-11724",
+      "source": "boj",
+      "source_id": "11724",
+      "order": 17,
+      "tier": 1,
+      "tags": [
+        "DFS",
+        "BFS"
+      ],
+      "our_types": [
+        "그래프 탐색 (DFS/BFS)"
+      ]
+    },
+    {
+      "id": "boj-14502",
+      "source": "boj",
+      "source_id": "14502",
+      "order": 18,
+      "tier": 1,
+      "tags": [
+        "구현",
+        "BFS",
+        "완전탐색"
+      ],
+      "our_types": [
+        "구현 · 시뮬레이션",
+        "그래프 탐색 (DFS/BFS)",
+        "완전탐색 · 백트래킹"
+      ]
+    },
+    {
+      "id": "boj-16236",
+      "source": "boj",
+      "source_id": "16236",
+      "order": 19,
+      "tier": 1,
+      "tags": [
+        "구현",
+        "BFS",
+        "시뮬레이션"
+      ],
+      "our_types": [
+        "구현 · 시뮬레이션",
+        "그래프 탐색 (DFS/BFS)"
+      ]
+    },
+    {
+      "id": "boj-3190",
+      "source": "boj",
+      "source_id": "3190",
+      "order": 20,
+      "tier": 1,
+      "tags": [
+        "구현",
+        "시뮬레이션"
+      ],
+      "our_types": [
+        "구현 · 시뮬레이션"
+      ]
+    },
+    {
+      "id": "boj-14888",
+      "source": "boj",
+      "source_id": "14888",
+      "order": 21,
+      "tier": 1,
+      "tags": [
+        "완전탐색",
+        "백트래킹"
+      ],
+      "our_types": [
+        "완전탐색 · 백트래킹"
+      ]
+    },
+    {
+      "id": "boj-15686",
+      "source": "boj",
+      "source_id": "15686",
+      "order": 22,
+      "tier": 1,
+      "tags": [
+        "완전탐색",
+        "구현"
+      ],
+      "our_types": [
+        "완전탐색 · 백트래킹",
+        "구현 · 시뮬레이션"
+      ]
+    },
+    {
+      "id": "boj-1620",
+      "source": "boj",
+      "source_id": "1620",
+      "order": 23,
+      "tier": 1,
+      "tags": [
+        "해시"
+      ],
+      "our_types": [
+        "해시 · 맵 · 셋"
+      ]
+    },
+    {
+      "id": "boj-17219",
+      "source": "boj",
+      "source_id": "17219",
+      "order": 24,
+      "tier": 1,
+      "tags": [
+        "해시"
+      ],
+      "our_types": [
+        "해시 · 맵 · 셋"
+      ]
+    },
+    {
+      "id": "boj-9375",
+      "source": "boj",
+      "source_id": "9375",
+      "order": 25,
+      "tier": 1,
+      "tags": [
+        "해시"
+      ],
+      "our_types": [
+        "해시 · 맵 · 셋"
+      ]
+    },
+    {
+      "id": "boj-9012",
+      "source": "boj",
+      "source_id": "9012",
+      "order": 26,
+      "tier": 1,
+      "tags": [
+        "스택",
+        "문자열"
+      ],
+      "our_types": [
+        "스택 · 큐 · 덱 · 힙",
+        "문자열 처리 · 파싱"
+      ]
+    },
+    {
+      "id": "boj-1874",
+      "source": "boj",
+      "source_id": "1874",
+      "order": 27,
+      "tier": 1,
+      "tags": [
+        "스택"
+      ],
+      "our_types": [
+        "스택 · 큐 · 덱 · 힙"
+      ]
+    },
+    {
+      "id": "boj-1966",
+      "source": "boj",
+      "source_id": "1966",
+      "order": 28,
+      "tier": 1,
+      "tags": [
+        "큐"
+      ],
+      "our_types": [
+        "스택 · 큐 · 덱 · 힙"
+      ]
+    },
+    {
+      "id": "boj-11279",
+      "source": "boj",
+      "source_id": "11279",
+      "order": 29,
+      "tier": 1,
+      "tags": [
+        "힙"
+      ],
+      "our_types": [
+        "스택 · 큐 · 덱 · 힙"
+      ]
+    },
+    {
+      "id": "boj-1927",
+      "source": "boj",
+      "source_id": "1927",
+      "order": 30,
+      "tier": 1,
+      "tags": [
+        "힙"
+      ],
+      "our_types": [
+        "스택 · 큐 · 덱 · 힙"
+      ]
+    },
+    {
+      "id": "boj-1931",
+      "source": "boj",
+      "source_id": "1931",
+      "order": 31,
+      "tier": 1,
+      "tags": [
+        "그리디",
+        "정렬"
+      ],
+      "our_types": [
+        "정렬 · 그리디"
+      ]
+    },
+    {
+      "id": "boj-11399",
+      "source": "boj",
+      "source_id": "11399",
+      "order": 32,
+      "tier": 1,
+      "tags": [
+        "그리디"
+      ],
+      "our_types": [
+        "정렬 · 그리디"
+      ]
+    },
+    {
+      "id": "boj-11047",
+      "source": "boj",
+      "source_id": "11047",
+      "order": 33,
+      "tier": 1,
+      "tags": [
+        "그리디"
+      ],
+      "our_types": [
+        "정렬 · 그리디"
+      ]
+    },
+    {
+      "id": "boj-1920",
+      "source": "boj",
+      "source_id": "1920",
+      "order": 34,
+      "tier": 1,
+      "tags": [
+        "이분탐색"
+      ],
+      "our_types": [
+        "이분탐색 · 파라메트릭 서치"
+      ]
+    },
+    {
+      "id": "boj-1654",
+      "source": "boj",
+      "source_id": "1654",
+      "order": 35,
+      "tier": 1,
+      "tags": [
+        "이분탐색"
+      ],
+      "our_types": [
+        "이분탐색 · 파라메트릭 서치"
+      ]
+    },
+    {
+      "id": "boj-2805",
+      "source": "boj",
+      "source_id": "2805",
+      "order": 36,
+      "tier": 1,
+      "tags": [
+        "이분탐색"
+      ],
+      "our_types": [
+        "이분탐색 · 파라메트릭 서치"
+      ]
+    },
+    {
+      "id": "boj-2110",
+      "source": "boj",
+      "source_id": "2110",
+      "order": 37,
+      "tier": 1,
+      "tags": [
+        "이분탐색"
+      ],
+      "our_types": [
+        "이분탐색 · 파라메트릭 서치"
+      ]
+    },
+    {
+      "id": "boj-1463",
+      "source": "boj",
+      "source_id": "1463",
+      "order": 38,
+      "tier": 1,
+      "tags": [
+        "DP"
+      ],
+      "our_types": [
+        "동적 계획법"
+      ]
+    },
+    {
+      "id": "boj-11726",
+      "source": "boj",
+      "source_id": "11726",
+      "order": 39,
+      "tier": 1,
+      "tags": [
+        "DP"
+      ],
+      "our_types": [
+        "동적 계획법"
+      ]
+    },
+    {
+      "id": "boj-12865",
+      "source": "boj",
+      "source_id": "12865",
+      "order": 40,
+      "tier": 1,
+      "tags": [
+        "DP"
+      ],
+      "our_types": [
+        "동적 계획법"
+      ]
+    },
+    {
+      "id": "boj-11053",
+      "source": "boj",
+      "source_id": "11053",
+      "order": 41,
+      "tier": 1,
+      "tags": [
+        "DP",
+        "LIS"
+      ],
+      "our_types": [
+        "동적 계획법"
+      ]
+    },
+    {
+      "id": "boj-9251",
+      "source": "boj",
+      "source_id": "9251",
+      "order": 42,
+      "tier": 1,
+      "tags": [
+        "DP"
+      ],
+      "our_types": [
+        "동적 계획법"
+      ]
+    },
+    {
+      "id": "boj-1806",
+      "source": "boj",
+      "source_id": "1806",
+      "order": 50,
+      "tier": 2,
+      "tags": [
+        "투포인터"
+      ],
+      "our_types": [
+        "투포인터 · 슬라이딩 윈도우"
+      ]
+    },
+    {
+      "id": "boj-3273",
+      "source": "boj",
+      "source_id": "3273",
+      "order": 51,
+      "tier": 2,
+      "tags": [
+        "투포인터"
+      ],
+      "our_types": [
+        "투포인터 · 슬라이딩 윈도우"
+      ]
+    },
+    {
+      "id": "boj-11659",
+      "source": "boj",
+      "source_id": "11659",
+      "order": 52,
+      "tier": 2,
+      "tags": [
+        "누적합"
+      ],
+      "our_types": [
+        "누적합 · 차분"
+      ]
+    },
+    {
+      "id": "boj-11660",
+      "source": "boj",
+      "source_id": "11660",
+      "order": 53,
+      "tier": 2,
+      "tags": [
+        "누적합"
+      ],
+      "our_types": [
+        "누적합 · 차분"
+      ]
+    },
+    {
+      "id": "boj-1753",
+      "source": "boj",
+      "source_id": "1753",
+      "order": 54,
+      "tier": 2,
+      "tags": [
+        "다익스트라"
+      ],
+      "our_types": [
+        "최단경로"
+      ]
+    },
+    {
+      "id": "boj-1916",
+      "source": "boj",
+      "source_id": "1916",
+      "order": 55,
+      "tier": 2,
+      "tags": [
+        "다익스트라"
+      ],
+      "our_types": [
+        "최단경로"
+      ]
+    },
+    {
+      "id": "boj-11404",
+      "source": "boj",
+      "source_id": "11404",
+      "order": 56,
+      "tier": 2,
+      "tags": [
+        "플로이드"
+      ],
+      "our_types": [
+        "최단경로"
+      ]
+    },
+    {
+      "id": "boj-11725",
+      "source": "boj",
+      "source_id": "11725",
+      "order": 57,
+      "tier": 2,
+      "tags": [
+        "트리"
+      ],
+      "our_types": [
+        "트리"
+      ]
+    },
+    {
+      "id": "boj-1967",
+      "source": "boj",
+      "source_id": "1967",
+      "order": 58,
+      "tier": 2,
+      "tags": [
+        "트리"
+      ],
+      "our_types": [
+        "트리"
+      ]
+    },
+    {
+      "id": "boj-2252",
+      "source": "boj",
+      "source_id": "2252",
+      "order": 59,
+      "tier": 2,
+      "tags": [
+        "위상정렬"
+      ],
+      "our_types": [
+        "위상정렬"
+      ]
+    },
+    {
+      "id": "boj-1766",
+      "source": "boj",
+      "source_id": "1766",
+      "order": 60,
+      "tier": 2,
+      "tags": [
+        "위상정렬"
+      ],
+      "our_types": [
+        "위상정렬"
+      ]
+    },
+    {
+      "id": "boj-1717",
+      "source": "boj",
+      "source_id": "1717",
+      "order": 61,
+      "tier": 2,
+      "tags": [
+        "유니온파인드"
+      ],
+      "our_types": [
+        "유니온 파인드"
+      ]
+    },
+    {
+      "id": "boj-1976",
+      "source": "boj",
+      "source_id": "1976",
+      "order": 62,
+      "tier": 2,
+      "tags": [
+        "유니온파인드"
+      ],
+      "our_types": [
+        "유니온 파인드"
+      ]
+    },
+    {
+      "id": "boj-11723",
+      "source": "boj",
+      "source_id": "11723",
+      "order": 63,
+      "tier": 2,
+      "tags": [
+        "비트마스크"
+      ],
+      "our_types": [
+        "비트마스크"
+      ]
+    },
+    {
+      "id": "boj-2098",
+      "source": "boj",
+      "source_id": "2098",
+      "order": 64,
+      "tier": 2,
+      "tags": [
+        "TSP",
+        "비트마스크",
+        "DP"
+      ],
+      "our_types": [
+        "TSP",
+        "비트마스크",
+        "동적 계획법"
+      ]
+    },
+    {
+      "id": "boj-10971",
+      "source": "boj",
+      "source_id": "10971",
+      "order": 65,
+      "tier": 2,
+      "tags": [
+        "TSP",
+        "완전탐색"
+      ],
+      "our_types": [
+        "TSP",
+        "완전탐색 · 백트래킹"
+      ]
+    },
+    {
+      "id": "boj-5052",
+      "source": "boj",
+      "source_id": "5052",
+      "order": 66,
+      "tier": 2,
+      "tags": [
+        "트라이"
+      ],
+      "our_types": [
+        "트라이"
+      ]
+    },
+    {
+      "id": "boj-1197",
+      "source": "boj",
+      "source_id": "1197",
+      "order": 67,
+      "tier": 2,
+      "tags": [
+        "MST"
+      ],
+      "our_types": [
+        "MST"
+      ]
+    },
+    {
+      "id": "lc-two-sum",
+      "source": "leetcode",
+      "source_id": "two-sum",
+      "order": 80,
+      "tier": 1,
+      "tags": [
+        "해시"
+      ],
+      "our_types": [
+        "해시 · 맵 · 셋"
+      ]
+    },
+    {
+      "id": "lc-valid-parentheses",
+      "source": "leetcode",
+      "source_id": "valid-parentheses",
+      "order": 81,
+      "tier": 1,
+      "tags": [
+        "스택"
+      ],
+      "our_types": [
+        "스택 · 큐 · 덱 · 힙"
+      ]
+    },
+    {
+      "id": "lc-number-of-islands",
+      "source": "leetcode",
+      "source_id": "number-of-islands",
+      "order": 82,
+      "tier": 1,
+      "tags": [
+        "BFS",
+        "DFS"
+      ],
+      "our_types": [
+        "그래프 탐색 (DFS/BFS)"
+      ]
+    },
+    {
+      "id": "lc-course-schedule",
+      "source": "leetcode",
+      "source_id": "course-schedule",
+      "order": 83,
+      "tier": 2,
+      "tags": [
+        "위상정렬"
+      ],
+      "our_types": [
+        "위상정렬"
+      ]
+    },
+    {
+      "id": "lc-binary-search",
+      "source": "leetcode",
+      "source_id": "binary-search",
+      "order": 84,
+      "tier": 1,
+      "tags": [
+        "이분탐색"
+      ],
+      "our_types": [
+        "이분탐색 · 파라메트릭 서치"
+      ]
+    },
+    {
+      "id": "lc-climbing-stairs",
+      "source": "leetcode",
+      "source_id": "climbing-stairs",
+      "order": 85,
+      "tier": 1,
+      "tags": [
+        "DP"
+      ],
+      "our_types": [
+        "동적 계획법"
+      ]
+    },
+    {
+      "id": "lc-coin-change",
+      "source": "leetcode",
+      "source_id": "coin-change",
+      "order": 86,
+      "tier": 2,
+      "tags": [
+        "DP"
+      ],
+      "our_types": [
+        "동적 계획법"
+      ]
+    },
+    {
+      "id": "lc-longest-substring-without-repeating-characters",
+      "source": "leetcode",
+      "source_id": "longest-substring-without-repeating-characters",
+      "order": 87,
+      "tier": 1,
+      "tags": [
+        "슬라이딩윈도우"
+      ],
+      "our_types": [
+        "투포인터 · 슬라이딩 윈도우"
+      ]
+    },
+    {
+      "id": "lc-kth-largest-element-in-an-array",
+      "source": "leetcode",
+      "source_id": "kth-largest-element-in-an-array",
+      "order": 88,
+      "tier": 1,
+      "tags": [
+        "힙"
+      ],
+      "our_types": [
+        "스택 · 큐 · 덱 · 힙"
+      ]
+    },
+    {
+      "id": "lc-shortest-path-visiting-all-nodes",
+      "source": "leetcode",
+      "source_id": "shortest-path-visiting-all-nodes",
+      "order": 89,
+      "tier": 2,
+      "tags": [
+        "TSP",
+        "비트마스크"
+      ],
+      "our_types": [
+        "TSP",
+        "비트마스크"
+      ]
+    },
+    {
+      "id": "cf-20-C",
+      "source": "codeforces",
+      "source_id": "20-C",
+      "order": 90,
+      "tier": 2,
+      "tags": [
+        "다익스트라"
+      ],
+      "our_types": [
+        "최단경로"
+      ]
+    },
+    {
+      "id": "cf-706-B",
+      "source": "codeforces",
+      "source_id": "706-B",
+      "order": 91,
+      "tier": 1,
+      "tags": [
+        "이분탐색"
+      ],
+      "our_types": [
+        "이분탐색 · 파라메트릭 서치"
+      ]
+    },
+    {
+      "id": "cf-489-B",
+      "source": "codeforces",
+      "source_id": "489-B",
+      "order": 92,
+      "tier": 1,
+      "tags": [
+        "그리디"
+      ],
+      "our_types": [
+        "정렬 · 그리디"
+      ]
+    },
+    {
+      "id": "cf-580-C",
+      "source": "codeforces",
+      "source_id": "580-C",
+      "order": 93,
+      "tier": 1,
+      "tags": [
+        "DFS",
+        "트리"
+      ],
+      "our_types": [
+        "그래프 탐색 (DFS/BFS)",
+        "트리"
+      ]
+    },
+    {
+      "id": "cf-1365-D",
+      "source": "codeforces",
+      "source_id": "1365-D",
+      "order": 94,
+      "tier": 2,
+      "tags": [
+        "BFS",
+        "구현"
+      ],
+      "our_types": [
+        "그래프 탐색 (DFS/BFS)",
+        "구현 · 시뮬레이션"
+      ]
+    },
+    {
+      "id": "boj-13458",
+      "source": "boj",
+      "source_id": "13458",
+      "order": 200,
+      "tier": 1,
+      "tags": [
+        "구현 · 시뮬레이션"
+      ],
+      "our_types": [
+        "구현 · 시뮬레이션"
+      ]
+    },
+    {
+      "id": "boj-14499",
+      "source": "boj",
+      "source_id": "14499",
+      "order": 201,
+      "tier": 2,
+      "tags": [
+        "구현 · 시뮬레이션"
+      ],
+      "our_types": [
+        "구현 · 시뮬레이션"
+      ]
+    },
+    {
+      "id": "boj-14500",
+      "source": "boj",
+      "source_id": "14500",
+      "order": 202,
+      "tier": 2,
+      "tags": [
+        "완전탐색 · 백트래킹",
+        "구현 · 시뮬레이션"
+      ],
+      "our_types": [
+        "완전탐색 · 백트래킹",
+        "구현 · 시뮬레이션"
+      ]
+    },
+    {
+      "id": "boj-14501",
+      "source": "boj",
+      "source_id": "14501",
+      "order": 203,
+      "tier": 1,
+      "tags": [
+        "동적 계획법",
+        "완전탐색 · 백트래킹"
+      ],
+      "our_types": [
+        "동적 계획법",
+        "완전탐색 · 백트래킹"
+      ]
+    },
+    {
+      "id": "boj-14503",
+      "source": "boj",
+      "source_id": "14503",
+      "order": 204,
+      "tier": 2,
+      "tags": [
+        "구현 · 시뮬레이션"
+      ],
+      "our_types": [
+        "구현 · 시뮬레이션"
+      ]
+    },
+    {
+      "id": "boj-14889",
+      "source": "boj",
+      "source_id": "14889",
+      "order": 205,
+      "tier": 1,
+      "tags": [
+        "완전탐색 · 백트래킹"
+      ],
+      "our_types": [
+        "완전탐색 · 백트래킹"
+      ]
+    },
+    {
+      "id": "boj-14890",
+      "source": "boj",
+      "source_id": "14890",
+      "order": 206,
+      "tier": 2,
+      "tags": [
+        "구현 · 시뮬레이션"
+      ],
+      "our_types": [
+        "구현 · 시뮬레이션"
+      ]
+    },
+    {
+      "id": "boj-14891",
+      "source": "boj",
+      "source_id": "14891",
+      "order": 207,
+      "tier": 2,
+      "tags": [
+        "구현 · 시뮬레이션"
+      ],
+      "our_types": [
+        "구현 · 시뮬레이션"
+      ]
+    },
+    {
+      "id": "boj-15683",
+      "source": "boj",
+      "source_id": "15683",
+      "order": 208,
+      "tier": 2,
+      "tags": [
+        "완전탐색 · 백트래킹",
+        "구현 · 시뮬레이션"
+      ],
+      "our_types": [
+        "완전탐색 · 백트래킹",
+        "구현 · 시뮬레이션"
+      ]
+    },
+    {
+      "id": "boj-15684",
+      "source": "boj",
+      "source_id": "15684",
+      "order": 209,
+      "tier": 2,
+      "tags": [
+        "완전탐색 · 백트래킹"
+      ],
+      "our_types": [
+        "완전탐색 · 백트래킹"
+      ]
+    },
+    {
+      "id": "boj-15685",
+      "source": "boj",
+      "source_id": "15685",
+      "order": 210,
+      "tier": 2,
+      "tags": [
+        "구현 · 시뮬레이션"
+      ],
+      "our_types": [
+        "구현 · 시뮬레이션"
+      ]
+    },
+    {
+      "id": "boj-16234",
+      "source": "boj",
+      "source_id": "16234",
+      "order": 211,
+      "tier": 2,
+      "tags": [
+        "그래프 탐색 (DFS/BFS)",
+        "구현 · 시뮬레이션"
+      ],
+      "our_types": [
+        "그래프 탐색 (DFS/BFS)",
+        "구현 · 시뮬레이션"
+      ]
+    },
+    {
+      "id": "boj-17135",
+      "source": "boj",
+      "source_id": "17135",
+      "order": 212,
+      "tier": 2,
+      "tags": [
+        "완전탐색 · 백트래킹",
+        "구현 · 시뮬레이션"
+      ],
+      "our_types": [
+        "완전탐색 · 백트래킹",
+        "구현 · 시뮬레이션"
+      ]
+    },
+    {
+      "id": "boj-17140",
+      "source": "boj",
+      "source_id": "17140",
+      "order": 213,
+      "tier": 2,
+      "tags": [
+        "구현 · 시뮬레이션"
+      ],
+      "our_types": [
+        "구현 · 시뮬레이션"
+      ]
+    },
+    {
+      "id": "boj-17143",
+      "source": "boj",
+      "source_id": "17143",
+      "order": 214,
+      "tier": 2,
+      "tags": [
+        "구현 · 시뮬레이션"
+      ],
+      "our_types": [
+        "구현 · 시뮬레이션"
+      ]
+    },
+    {
+      "id": "boj-17144",
+      "source": "boj",
+      "source_id": "17144",
+      "order": 215,
+      "tier": 2,
+      "tags": [
+        "구현 · 시뮬레이션"
+      ],
+      "our_types": [
+        "구현 · 시뮬레이션"
+      ]
+    },
+    {
+      "id": "boj-20055",
+      "source": "boj",
+      "source_id": "20055",
+      "order": 216,
+      "tier": 2,
+      "tags": [
+        "구현 · 시뮬레이션"
+      ],
+      "our_types": [
+        "구현 · 시뮬레이션"
+      ]
+    },
+    {
+      "id": "boj-20056",
+      "source": "boj",
+      "source_id": "20056",
+      "order": 217,
+      "tier": 2,
+      "tags": [
+        "구현 · 시뮬레이션"
+      ],
+      "our_types": [
+        "구현 · 시뮬레이션"
+      ]
+    },
+    {
+      "id": "boj-21608",
+      "source": "boj",
+      "source_id": "21608",
+      "order": 218,
+      "tier": 2,
+      "tags": [
+        "구현 · 시뮬레이션"
+      ],
+      "our_types": [
+        "구현 · 시뮬레이션"
+      ]
+    },
+    {
+      "id": "boj-21610",
+      "source": "boj",
+      "source_id": "21610",
+      "order": 219,
+      "tier": 2,
+      "tags": [
+        "구현 · 시뮬레이션"
+      ],
+      "our_types": [
+        "구현 · 시뮬레이션"
+      ]
+    },
+    {
+      "id": "boj-12100",
+      "source": "boj",
+      "source_id": "12100",
+      "order": 220,
+      "tier": 2,
+      "tags": [
+        "구현 · 시뮬레이션",
+        "완전탐색 · 백트래킹"
+      ],
+      "our_types": [
+        "구현 · 시뮬레이션",
+        "완전탐색 · 백트래킹"
+      ]
+    },
+    {
+      "id": "boj-13460",
+      "source": "boj",
+      "source_id": "13460",
+      "order": 221,
+      "tier": 2,
+      "tags": [
+        "그래프 탐색 (DFS/BFS)",
+        "구현 · 시뮬레이션"
+      ],
+      "our_types": [
+        "그래프 탐색 (DFS/BFS)",
+        "구현 · 시뮬레이션"
+      ]
+    },
+    {
+      "id": "boj-16926",
+      "source": "boj",
+      "source_id": "16926",
+      "order": 222,
+      "tier": 1,
+      "tags": [
+        "구현 · 시뮬레이션"
+      ],
+      "our_types": [
+        "구현 · 시뮬레이션"
+      ]
+    },
+    {
+      "id": "boj-14719",
+      "source": "boj",
+      "source_id": "14719",
+      "order": 223,
+      "tier": 2,
+      "tags": [
+        "구현 · 시뮬레이션"
+      ],
+      "our_types": [
+        "구현 · 시뮬레이션"
+      ]
+    },
+    {
+      "id": "boj-18808",
+      "source": "boj",
+      "source_id": "18808",
+      "order": 224,
+      "tier": 2,
+      "tags": [
+        "구현 · 시뮬레이션",
+        "완전탐색 · 백트래킹"
+      ],
+      "our_types": [
+        "구현 · 시뮬레이션",
+        "완전탐색 · 백트래킹"
+      ]
+    },
+    {
+      "id": "boj-1012",
+      "source": "boj",
+      "source_id": "1012",
+      "order": 230,
+      "tier": 1,
+      "tags": [
+        "그래프 탐색 (DFS/BFS)"
+      ],
+      "our_types": [
+        "그래프 탐색 (DFS/BFS)"
+      ]
+    },
+    {
+      "id": "boj-4963",
+      "source": "boj",
+      "source_id": "4963",
+      "order": 231,
+      "tier": 1,
+      "tags": [
+        "그래프 탐색 (DFS/BFS)"
+      ],
+      "our_types": [
+        "그래프 탐색 (DFS/BFS)"
+      ]
+    },
+    {
+      "id": "boj-2468",
+      "source": "boj",
+      "source_id": "2468",
+      "order": 232,
+      "tier": 1,
+      "tags": [
+        "그래프 탐색 (DFS/BFS)"
+      ],
+      "our_types": [
+        "그래프 탐색 (DFS/BFS)"
+      ]
+    },
+    {
+      "id": "boj-2583",
+      "source": "boj",
+      "source_id": "2583",
+      "order": 233,
+      "tier": 1,
+      "tags": [
+        "그래프 탐색 (DFS/BFS)"
+      ],
+      "our_types": [
+        "그래프 탐색 (DFS/BFS)"
+      ]
+    },
+    {
+      "id": "boj-10026",
+      "source": "boj",
+      "source_id": "10026",
+      "order": 234,
+      "tier": 1,
+      "tags": [
+        "그래프 탐색 (DFS/BFS)"
+      ],
+      "our_types": [
+        "그래프 탐색 (DFS/BFS)"
+      ]
+    },
+    {
+      "id": "boj-7562",
+      "source": "boj",
+      "source_id": "7562",
+      "order": 235,
+      "tier": 1,
+      "tags": [
+        "그래프 탐색 (DFS/BFS)"
+      ],
+      "our_types": [
+        "그래프 탐색 (DFS/BFS)"
+      ]
+    },
+    {
+      "id": "boj-2206",
+      "source": "boj",
+      "source_id": "2206",
+      "order": 236,
+      "tier": 2,
+      "tags": [
+        "그래프 탐색 (DFS/BFS)"
+      ],
+      "our_types": [
+        "그래프 탐색 (DFS/BFS)"
+      ]
+    },
+    {
+      "id": "boj-2573",
+      "source": "boj",
+      "source_id": "2573",
+      "order": 237,
+      "tier": 2,
+      "tags": [
+        "그래프 탐색 (DFS/BFS)"
+      ],
+      "our_types": [
+        "그래프 탐색 (DFS/BFS)"
+      ]
+    },
+    {
+      "id": "boj-13549",
+      "source": "boj",
+      "source_id": "13549",
+      "order": 238,
+      "tier": 2,
+      "tags": [
+        "그래프 탐색 (DFS/BFS)",
+        "최단경로"
+      ],
+      "our_types": [
+        "그래프 탐색 (DFS/BFS)",
+        "최단경로"
+      ]
+    },
+    {
+      "id": "boj-9019",
+      "source": "boj",
+      "source_id": "9019",
+      "order": 239,
+      "tier": 2,
+      "tags": [
+        "그래프 탐색 (DFS/BFS)"
+      ],
+      "our_types": [
+        "그래프 탐색 (DFS/BFS)"
+      ]
+    },
+    {
+      "id": "boj-4179",
+      "source": "boj",
+      "source_id": "4179",
+      "order": 240,
+      "tier": 2,
+      "tags": [
+        "그래프 탐색 (DFS/BFS)"
+      ],
+      "our_types": [
+        "그래프 탐색 (DFS/BFS)"
+      ]
+    },
+    {
+      "id": "boj-2146",
+      "source": "boj",
+      "source_id": "2146",
+      "order": 241,
+      "tier": 2,
+      "tags": [
+        "그래프 탐색 (DFS/BFS)"
+      ],
+      "our_types": [
+        "그래프 탐색 (DFS/BFS)"
+      ]
+    },
+    {
+      "id": "boj-2636",
+      "source": "boj",
+      "source_id": "2636",
+      "order": 242,
+      "tier": 2,
+      "tags": [
+        "그래프 탐색 (DFS/BFS)"
+      ],
+      "our_types": [
+        "그래프 탐색 (DFS/BFS)"
+      ]
+    },
+    {
+      "id": "boj-2589",
+      "source": "boj",
+      "source_id": "2589",
+      "order": 243,
+      "tier": 2,
+      "tags": [
+        "그래프 탐색 (DFS/BFS)"
+      ],
+      "our_types": [
+        "그래프 탐색 (DFS/BFS)"
+      ]
+    },
+    {
+      "id": "boj-1707",
+      "source": "boj",
+      "source_id": "1707",
+      "order": 244,
+      "tier": 2,
+      "tags": [
+        "그래프 탐색 (DFS/BFS)"
+      ],
+      "our_types": [
+        "그래프 탐색 (DFS/BFS)"
+      ]
+    },
+    {
+      "id": "boj-9466",
+      "source": "boj",
+      "source_id": "9466",
+      "order": 245,
+      "tier": 2,
+      "tags": [
+        "그래프 탐색 (DFS/BFS)"
+      ],
+      "our_types": [
+        "그래프 탐색 (DFS/BFS)"
+      ]
+    },
+    {
+      "id": "boj-16928",
+      "source": "boj",
+      "source_id": "16928",
+      "order": 246,
+      "tier": 1,
+      "tags": [
+        "그래프 탐색 (DFS/BFS)"
+      ],
+      "our_types": [
+        "그래프 탐색 (DFS/BFS)"
+      ]
+    },
+    {
+      "id": "boj-14940",
+      "source": "boj",
+      "source_id": "14940",
+      "order": 247,
+      "tier": 1,
+      "tags": [
+        "그래프 탐색 (DFS/BFS)"
+      ],
+      "our_types": [
+        "그래프 탐색 (DFS/BFS)"
+      ]
+    },
+    {
+      "id": "boj-5014",
+      "source": "boj",
+      "source_id": "5014",
+      "order": 248,
+      "tier": 1,
+      "tags": [
+        "그래프 탐색 (DFS/BFS)"
+      ],
+      "our_types": [
+        "그래프 탐색 (DFS/BFS)"
+      ]
+    },
+    {
+      "id": "boj-3055",
+      "source": "boj",
+      "source_id": "3055",
+      "order": 249,
+      "tier": 2,
+      "tags": [
+        "그래프 탐색 (DFS/BFS)"
+      ],
+      "our_types": [
+        "그래프 탐색 (DFS/BFS)"
+      ]
+    },
+    {
+      "id": "boj-9663",
+      "source": "boj",
+      "source_id": "9663",
+      "order": 260,
+      "tier": 2,
+      "tags": [
+        "완전탐색 · 백트래킹"
+      ],
+      "our_types": [
+        "완전탐색 · 백트래킹"
+      ]
+    },
+    {
+      "id": "boj-1182",
+      "source": "boj",
+      "source_id": "1182",
+      "order": 261,
+      "tier": 1,
+      "tags": [
+        "완전탐색 · 백트래킹",
+        "비트마스크"
+      ],
+      "our_types": [
+        "완전탐색 · 백트래킹",
+        "비트마스크"
+      ]
+    },
+    {
+      "id": "boj-1759",
+      "source": "boj",
+      "source_id": "1759",
+      "order": 262,
+      "tier": 2,
+      "tags": [
+        "완전탐색 · 백트래킹",
+        "문자열 처리 · 파싱"
+      ],
+      "our_types": [
+        "완전탐색 · 백트래킹",
+        "문자열 처리 · 파싱"
+      ]
+    },
+    {
+      "id": "boj-15649",
+      "source": "boj",
+      "source_id": "15649",
+      "order": 263,
+      "tier": 1,
+      "tags": [
+        "완전탐색 · 백트래킹",
+        "조합론 · 순열조합"
+      ],
+      "our_types": [
+        "완전탐색 · 백트래킹",
+        "조합론 · 순열조합"
+      ]
+    },
+    {
+      "id": "boj-15650",
+      "source": "boj",
+      "source_id": "15650",
+      "order": 264,
+      "tier": 1,
+      "tags": [
+        "완전탐색 · 백트래킹",
+        "조합론 · 순열조합"
+      ],
+      "our_types": [
+        "완전탐색 · 백트래킹",
+        "조합론 · 순열조합"
+      ]
+    },
+    {
+      "id": "boj-2580",
+      "source": "boj",
+      "source_id": "2580",
+      "order": 265,
+      "tier": 2,
+      "tags": [
+        "완전탐색 · 백트래킹"
+      ],
+      "our_types": [
+        "완전탐색 · 백트래킹"
+      ]
+    },
+    {
+      "id": "boj-1987",
+      "source": "boj",
+      "source_id": "1987",
+      "order": 266,
+      "tier": 2,
+      "tags": [
+        "완전탐색 · 백트래킹",
+        "그래프 탐색 (DFS/BFS)"
+      ],
+      "our_types": [
+        "완전탐색 · 백트래킹",
+        "그래프 탐색 (DFS/BFS)"
+      ]
+    },
+    {
+      "id": "boj-6603",
+      "source": "boj",
+      "source_id": "6603",
+      "order": 267,
+      "tier": 1,
+      "tags": [
+        "완전탐색 · 백트래킹",
+        "조합론 · 순열조합"
+      ],
+      "our_types": [
+        "완전탐색 · 백트래킹",
+        "조합론 · 순열조합"
+      ]
+    },
+    {
+      "id": "boj-1764",
+      "source": "boj",
+      "source_id": "1764",
+      "order": 270,
+      "tier": 1,
+      "tags": [
+        "해시 · 맵 · 셋",
+        "문자열 처리 · 파싱"
+      ],
+      "our_types": [
+        "해시 · 맵 · 셋",
+        "문자열 처리 · 파싱"
+      ]
+    },
+    {
+      "id": "boj-10816",
+      "source": "boj",
+      "source_id": "10816",
+      "order": 271,
+      "tier": 1,
+      "tags": [
+        "해시 · 맵 · 셋",
+        "이분탐색 · 파라메트릭 서치"
+      ],
+      "our_types": [
+        "해시 · 맵 · 셋",
+        "이분탐색 · 파라메트릭 서치"
+      ]
+    },
+    {
+      "id": "boj-14425",
+      "source": "boj",
+      "source_id": "14425",
+      "order": 272,
+      "tier": 1,
+      "tags": [
+        "해시 · 맵 · 셋",
+        "트라이"
+      ],
+      "our_types": [
+        "해시 · 맵 · 셋",
+        "트라이"
+      ]
+    },
+    {
+      "id": "boj-1541",
+      "source": "boj",
+      "source_id": "1541",
+      "order": 273,
+      "tier": 1,
+      "tags": [
+        "문자열 처리 · 파싱",
+        "정렬 · 그리디"
+      ],
+      "our_types": [
+        "문자열 처리 · 파싱",
+        "정렬 · 그리디"
+      ]
+    },
+    {
+      "id": "boj-5430",
+      "source": "boj",
+      "source_id": "5430",
+      "order": 274,
+      "tier": 1,
+      "tags": [
+        "문자열 처리 · 파싱",
+        "스택 · 큐 · 덱 · 힙"
+      ],
+      "our_types": [
+        "문자열 처리 · 파싱",
+        "스택 · 큐 · 덱 · 힙"
+      ]
+    },
+    {
+      "id": "boj-9935",
+      "source": "boj",
+      "source_id": "9935",
+      "order": 275,
+      "tier": 2,
+      "tags": [
+        "문자열 처리 · 파싱",
+        "스택 · 큐 · 덱 · 힙"
+      ],
+      "our_types": [
+        "문자열 처리 · 파싱",
+        "스택 · 큐 · 덱 · 힙"
+      ]
+    },
+    {
+      "id": "boj-5525",
+      "source": "boj",
+      "source_id": "5525",
+      "order": 276,
+      "tier": 1,
+      "tags": [
+        "문자열 처리 · 파싱"
+      ],
+      "our_types": [
+        "문자열 처리 · 파싱"
+      ]
+    },
+    {
+      "id": "boj-17413",
+      "source": "boj",
+      "source_id": "17413",
+      "order": 277,
+      "tier": 1,
+      "tags": [
+        "문자열 처리 · 파싱"
+      ],
+      "our_types": [
+        "문자열 처리 · 파싱"
+      ]
+    },
+    {
+      "id": "boj-10773",
+      "source": "boj",
+      "source_id": "10773",
+      "order": 280,
+      "tier": 1,
+      "tags": [
+        "스택 · 큐 · 덱 · 힙"
+      ],
+      "our_types": [
+        "스택 · 큐 · 덱 · 힙"
+      ]
+    },
+    {
+      "id": "boj-4949",
+      "source": "boj",
+      "source_id": "4949",
+      "order": 281,
+      "tier": 1,
+      "tags": [
+        "스택 · 큐 · 덱 · 힙",
+        "문자열 처리 · 파싱"
+      ],
+      "our_types": [
+        "스택 · 큐 · 덱 · 힙",
+        "문자열 처리 · 파싱"
+      ]
+    },
+    {
+      "id": "boj-2493",
+      "source": "boj",
+      "source_id": "2493",
+      "order": 282,
+      "tier": 2,
+      "tags": [
+        "스택 · 큐 · 덱 · 힙"
+      ],
+      "our_types": [
+        "스택 · 큐 · 덱 · 힙"
+      ]
+    },
+    {
+      "id": "boj-17298",
+      "source": "boj",
+      "source_id": "17298",
+      "order": 283,
+      "tier": 2,
+      "tags": [
+        "스택 · 큐 · 덱 · 힙"
+      ],
+      "our_types": [
+        "스택 · 큐 · 덱 · 힙"
+      ]
+    },
+    {
+      "id": "boj-2164",
+      "source": "boj",
+      "source_id": "2164",
+      "order": 284,
+      "tier": 1,
+      "tags": [
+        "스택 · 큐 · 덱 · 힙"
+      ],
+      "our_types": [
+        "스택 · 큐 · 덱 · 힙"
+      ]
+    },
+    {
+      "id": "boj-11286",
+      "source": "boj",
+      "source_id": "11286",
+      "order": 285,
+      "tier": 1,
+      "tags": [
+        "스택 · 큐 · 덱 · 힙"
+      ],
+      "our_types": [
+        "스택 · 큐 · 덱 · 힙"
+      ]
+    },
+    {
+      "id": "boj-1655",
+      "source": "boj",
+      "source_id": "1655",
+      "order": 286,
+      "tier": 2,
+      "tags": [
+        "스택 · 큐 · 덱 · 힙"
+      ],
+      "our_types": [
+        "스택 · 큐 · 덱 · 힙"
+      ]
+    },
+    {
+      "id": "boj-1715",
+      "source": "boj",
+      "source_id": "1715",
+      "order": 287,
+      "tier": 2,
+      "tags": [
+        "스택 · 큐 · 덱 · 힙",
+        "정렬 · 그리디"
+      ],
+      "our_types": [
+        "스택 · 큐 · 덱 · 힙",
+        "정렬 · 그리디"
+      ]
+    },
+    {
+      "id": "boj-7662",
+      "source": "boj",
+      "source_id": "7662",
+      "order": 288,
+      "tier": 2,
+      "tags": [
+        "스택 · 큐 · 덱 · 힙"
+      ],
+      "our_types": [
+        "스택 · 큐 · 덱 · 힙"
+      ]
+    },
+    {
+      "id": "boj-2075",
+      "source": "boj",
+      "source_id": "2075",
+      "order": 289,
+      "tier": 1,
+      "tags": [
+        "스택 · 큐 · 덱 · 힙"
+      ],
+      "our_types": [
+        "스택 · 큐 · 덱 · 힙"
+      ]
+    },
+    {
+      "id": "boj-1202",
+      "source": "boj",
+      "source_id": "1202",
+      "order": 290,
+      "tier": 2,
+      "tags": [
+        "스택 · 큐 · 덱 · 힙",
+        "그리디 + 자료구조 혼합"
+      ],
+      "our_types": [
+        "스택 · 큐 · 덱 · 힙",
+        "그리디 + 자료구조 혼합"
+      ]
+    },
+    {
+      "id": "boj-2839",
+      "source": "boj",
+      "source_id": "2839",
+      "order": 300,
+      "tier": 1,
+      "tags": [
+        "정렬 · 그리디"
+      ],
+      "our_types": [
+        "정렬 · 그리디"
+      ]
+    },
+    {
+      "id": "boj-2217",
+      "source": "boj",
+      "source_id": "2217",
+      "order": 301,
+      "tier": 1,
+      "tags": [
+        "정렬 · 그리디"
+      ],
+      "our_types": [
+        "정렬 · 그리디"
+      ]
+    },
+    {
+      "id": "boj-1744",
+      "source": "boj",
+      "source_id": "1744",
+      "order": 302,
+      "tier": 2,
+      "tags": [
+        "정렬 · 그리디"
+      ],
+      "our_types": [
+        "정렬 · 그리디"
+      ]
+    },
+    {
+      "id": "boj-1946",
+      "source": "boj",
+      "source_id": "1946",
+      "order": 303,
+      "tier": 1,
+      "tags": [
+        "정렬 · 그리디"
+      ],
+      "our_types": [
+        "정렬 · 그리디"
+      ]
+    },
+    {
+      "id": "boj-13305",
+      "source": "boj",
+      "source_id": "13305",
+      "order": 304,
+      "tier": 1,
+      "tags": [
+        "정렬 · 그리디"
+      ],
+      "our_types": [
+        "정렬 · 그리디"
+      ]
+    },
+    {
+      "id": "boj-1026",
+      "source": "boj",
+      "source_id": "1026",
+      "order": 305,
+      "tier": 1,
+      "tags": [
+        "정렬 · 그리디"
+      ],
+      "our_types": [
+        "정렬 · 그리디"
+      ]
+    },
+    {
+      "id": "boj-1439",
+      "source": "boj",
+      "source_id": "1439",
+      "order": 306,
+      "tier": 1,
+      "tags": [
+        "정렬 · 그리디",
+        "문자열 처리 · 파싱"
+      ],
+      "our_types": [
+        "정렬 · 그리디",
+        "문자열 처리 · 파싱"
+      ]
+    },
+    {
+      "id": "boj-1700",
+      "source": "boj",
+      "source_id": "1700",
+      "order": 307,
+      "tier": 2,
+      "tags": [
+        "정렬 · 그리디"
+      ],
+      "our_types": [
+        "정렬 · 그리디"
+      ]
+    },
+    {
+      "id": "boj-1300",
+      "source": "boj",
+      "source_id": "1300",
+      "order": 310,
+      "tier": 2,
+      "tags": [
+        "이분탐색 · 파라메트릭 서치"
+      ],
+      "our_types": [
+        "이분탐색 · 파라메트릭 서치"
+      ]
+    },
+    {
+      "id": "boj-12015",
+      "source": "boj",
+      "source_id": "12015",
+      "order": 311,
+      "tier": 2,
+      "tags": [
+        "이분탐색 · 파라메트릭 서치",
+        "동적 계획법"
+      ],
+      "our_types": [
+        "이분탐색 · 파라메트릭 서치",
+        "동적 계획법"
+      ]
+    },
+    {
+      "id": "boj-2512",
+      "source": "boj",
+      "source_id": "2512",
+      "order": 312,
+      "tier": 1,
+      "tags": [
+        "이분탐색 · 파라메트릭 서치"
+      ],
+      "our_types": [
+        "이분탐색 · 파라메트릭 서치"
+      ]
+    },
+    {
+      "id": "boj-2343",
+      "source": "boj",
+      "source_id": "2343",
+      "order": 313,
+      "tier": 1,
+      "tags": [
+        "이분탐색 · 파라메트릭 서치"
+      ],
+      "our_types": [
+        "이분탐색 · 파라메트릭 서치"
+      ]
+    },
+    {
+      "id": "boj-2470",
+      "source": "boj",
+      "source_id": "2470",
+      "order": 314,
+      "tier": 2,
+      "tags": [
+        "이분탐색 · 파라메트릭 서치",
+        "투포인터 · 슬라이딩 윈도우"
+      ],
+      "our_types": [
+        "이분탐색 · 파라메트릭 서치",
+        "투포인터 · 슬라이딩 윈도우"
+      ]
+    },
+    {
+      "id": "boj-2579",
+      "source": "boj",
+      "source_id": "2579",
+      "order": 320,
+      "tier": 1,
+      "tags": [
+        "동적 계획법"
+      ],
+      "our_types": [
+        "동적 계획법"
+      ]
+    },
+    {
+      "id": "boj-9095",
+      "source": "boj",
+      "source_id": "9095",
+      "order": 321,
+      "tier": 1,
+      "tags": [
+        "동적 계획법"
+      ],
+      "our_types": [
+        "동적 계획법"
+      ]
+    },
+    {
+      "id": "boj-1149",
+      "source": "boj",
+      "source_id": "1149",
+      "order": 322,
+      "tier": 1,
+      "tags": [
+        "동적 계획법"
+      ],
+      "our_types": [
+        "동적 계획법"
+      ]
+    },
+    {
+      "id": "boj-1932",
+      "source": "boj",
+      "source_id": "1932",
+      "order": 323,
+      "tier": 1,
+      "tags": [
+        "동적 계획법"
+      ],
+      "our_types": [
+        "동적 계획법"
+      ]
+    },
+    {
+      "id": "boj-2156",
+      "source": "boj",
+      "source_id": "2156",
+      "order": 324,
+      "tier": 1,
+      "tags": [
+        "동적 계획법"
+      ],
+      "our_types": [
+        "동적 계획법"
+      ]
+    },
+    {
+      "id": "boj-1912",
+      "source": "boj",
+      "source_id": "1912",
+      "order": 325,
+      "tier": 1,
+      "tags": [
+        "동적 계획법"
+      ],
+      "our_types": [
+        "동적 계획법"
+      ]
+    },
+    {
+      "id": "boj-9465",
+      "source": "boj",
+      "source_id": "9465",
+      "order": 326,
+      "tier": 1,
+      "tags": [
+        "동적 계획법"
+      ],
+      "our_types": [
+        "동적 계획법"
+      ]
+    },
+    {
+      "id": "boj-2293",
+      "source": "boj",
+      "source_id": "2293",
+      "order": 327,
+      "tier": 2,
+      "tags": [
+        "동적 계획법"
+      ],
+      "our_types": [
+        "동적 계획법"
+      ]
+    },
+    {
+      "id": "boj-2294",
+      "source": "boj",
+      "source_id": "2294",
+      "order": 328,
+      "tier": 2,
+      "tags": [
+        "동적 계획법"
+      ],
+      "our_types": [
+        "동적 계획법"
+      ]
+    },
+    {
+      "id": "boj-11054",
+      "source": "boj",
+      "source_id": "11054",
+      "order": 329,
+      "tier": 2,
+      "tags": [
+        "동적 계획법"
+      ],
+      "our_types": [
+        "동적 계획법"
+      ]
+    },
+    {
+      "id": "boj-1520",
+      "source": "boj",
+      "source_id": "1520",
+      "order": 330,
+      "tier": 2,
+      "tags": [
+        "동적 계획법",
+        "그래프 탐색 (DFS/BFS)"
+      ],
+      "our_types": [
+        "동적 계획법",
+        "그래프 탐색 (DFS/BFS)"
+      ]
+    },
+    {
+      "id": "boj-2096",
+      "source": "boj",
+      "source_id": "2096",
+      "order": 331,
+      "tier": 2,
+      "tags": [
+        "동적 계획법"
+      ],
+      "our_types": [
+        "동적 계획법"
+      ]
+    },
+    {
+      "id": "boj-12852",
+      "source": "boj",
+      "source_id": "12852",
+      "order": 332,
+      "tier": 1,
+      "tags": [
+        "동적 계획법"
+      ],
+      "our_types": [
+        "동적 계획법"
+      ]
+    },
+    {
+      "id": "boj-11727",
+      "source": "boj",
+      "source_id": "11727",
+      "order": 333,
+      "tier": 1,
+      "tags": [
+        "동적 계획법"
+      ],
+      "our_types": [
+        "동적 계획법"
+      ]
+    },
+    {
+      "id": "boj-9252",
+      "source": "boj",
+      "source_id": "9252",
+      "order": 334,
+      "tier": 2,
+      "tags": [
+        "동적 계획법"
+      ],
+      "our_types": [
+        "동적 계획법"
+      ]
+    },
+    {
+      "id": "boj-2225",
+      "source": "boj",
+      "source_id": "2225",
+      "order": 335,
+      "tier": 2,
+      "tags": [
+        "동적 계획법"
+      ],
+      "our_types": [
+        "동적 계획법"
+      ]
+    },
+    {
+      "id": "boj-1890",
+      "source": "boj",
+      "source_id": "1890",
+      "order": 336,
+      "tier": 1,
+      "tags": [
+        "동적 계획법"
+      ],
+      "our_types": [
+        "동적 계획법"
+      ]
+    },
+    {
+      "id": "boj-15486",
+      "source": "boj",
+      "source_id": "15486",
+      "order": 337,
+      "tier": 2,
+      "tags": [
+        "동적 계획법"
+      ],
+      "our_types": [
+        "동적 계획법"
+      ]
+    },
+    {
+      "id": "boj-2003",
+      "source": "boj",
+      "source_id": "2003",
+      "order": 340,
+      "tier": 1,
+      "tags": [
+        "투포인터 · 슬라이딩 윈도우"
+      ],
+      "our_types": [
+        "투포인터 · 슬라이딩 윈도우"
+      ]
+    },
+    {
+      "id": "boj-2230",
+      "source": "boj",
+      "source_id": "2230",
+      "order": 341,
+      "tier": 1,
+      "tags": [
+        "투포인터 · 슬라이딩 윈도우"
+      ],
+      "our_types": [
+        "투포인터 · 슬라이딩 윈도우"
+      ]
+    },
+    {
+      "id": "boj-2467",
+      "source": "boj",
+      "source_id": "2467",
+      "order": 342,
+      "tier": 2,
+      "tags": [
+        "투포인터 · 슬라이딩 윈도우"
+      ],
+      "our_types": [
+        "투포인터 · 슬라이딩 윈도우"
+      ]
+    },
+    {
+      "id": "boj-1253",
+      "source": "boj",
+      "source_id": "1253",
+      "order": 343,
+      "tier": 2,
+      "tags": [
+        "투포인터 · 슬라이딩 윈도우"
+      ],
+      "our_types": [
+        "투포인터 · 슬라이딩 윈도우"
+      ]
+    },
+    {
+      "id": "boj-1644",
+      "source": "boj",
+      "source_id": "1644",
+      "order": 344,
+      "tier": 2,
+      "tags": [
+        "투포인터 · 슬라이딩 윈도우"
+      ],
+      "our_types": [
+        "투포인터 · 슬라이딩 윈도우"
+      ]
+    },
+    {
+      "id": "boj-2559",
+      "source": "boj",
+      "source_id": "2559",
+      "order": 345,
+      "tier": 1,
+      "tags": [
+        "누적합 · 차분",
+        "투포인터 · 슬라이딩 윈도우"
+      ],
+      "our_types": [
+        "누적합 · 차분",
+        "투포인터 · 슬라이딩 윈도우"
+      ]
+    },
+    {
+      "id": "boj-10986",
+      "source": "boj",
+      "source_id": "10986",
+      "order": 346,
+      "tier": 2,
+      "tags": [
+        "누적합 · 차분"
+      ],
+      "our_types": [
+        "누적합 · 차분"
+      ]
+    },
+    {
+      "id": "boj-3020",
+      "source": "boj",
+      "source_id": "3020",
+      "order": 347,
+      "tier": 2,
+      "tags": [
+        "누적합 · 차분",
+        "이분탐색 · 파라메트릭 서치"
+      ],
+      "our_types": [
+        "누적합 · 차분",
+        "이분탐색 · 파라메트릭 서치"
+      ]
+    },
+    {
+      "id": "boj-1238",
+      "source": "boj",
+      "source_id": "1238",
+      "order": 350,
+      "tier": 2,
+      "tags": [
+        "최단경로"
+      ],
+      "our_types": [
+        "최단경로"
+      ]
+    },
+    {
+      "id": "boj-1504",
+      "source": "boj",
+      "source_id": "1504",
+      "order": 351,
+      "tier": 2,
+      "tags": [
+        "최단경로"
+      ],
+      "our_types": [
+        "최단경로"
+      ]
+    },
+    {
+      "id": "boj-4485",
+      "source": "boj",
+      "source_id": "4485",
+      "order": 352,
+      "tier": 2,
+      "tags": [
+        "최단경로"
+      ],
+      "our_types": [
+        "최단경로"
+      ]
+    },
+    {
+      "id": "boj-1261",
+      "source": "boj",
+      "source_id": "1261",
+      "order": 353,
+      "tier": 2,
+      "tags": [
+        "최단경로"
+      ],
+      "our_types": [
+        "최단경로"
+      ]
+    },
+    {
+      "id": "boj-1389",
+      "source": "boj",
+      "source_id": "1389",
+      "order": 354,
+      "tier": 1,
+      "tags": [
+        "최단경로"
+      ],
+      "our_types": [
+        "최단경로"
+      ]
+    },
+    {
+      "id": "boj-1991",
+      "source": "boj",
+      "source_id": "1991",
+      "order": 360,
+      "tier": 1,
+      "tags": [
+        "트리"
+      ],
+      "our_types": [
+        "트리"
+      ]
+    },
+    {
+      "id": "boj-1167",
+      "source": "boj",
+      "source_id": "1167",
+      "order": 361,
+      "tier": 2,
+      "tags": [
+        "트리"
+      ],
+      "our_types": [
+        "트리"
+      ]
+    },
+    {
+      "id": "boj-1068",
+      "source": "boj",
+      "source_id": "1068",
+      "order": 362,
+      "tier": 2,
+      "tags": [
+        "트리"
+      ],
+      "our_types": [
+        "트리"
+      ]
+    },
+    {
+      "id": "boj-5639",
+      "source": "boj",
+      "source_id": "5639",
+      "order": 363,
+      "tier": 2,
+      "tags": [
+        "트리"
+      ],
+      "our_types": [
+        "트리"
+      ]
+    },
+    {
+      "id": "boj-4803",
+      "source": "boj",
+      "source_id": "4803",
+      "order": 364,
+      "tier": 2,
+      "tags": [
+        "트리"
+      ],
+      "our_types": [
+        "트리"
+      ]
+    },
+    {
+      "id": "boj-1516",
+      "source": "boj",
+      "source_id": "1516",
+      "order": 370,
+      "tier": 2,
+      "tags": [
+        "위상정렬"
+      ],
+      "our_types": [
+        "위상정렬"
+      ]
+    },
+    {
+      "id": "boj-1005",
+      "source": "boj",
+      "source_id": "1005",
+      "order": 371,
+      "tier": 2,
+      "tags": [
+        "위상정렬"
+      ],
+      "our_types": [
+        "위상정렬"
+      ]
+    },
+    {
+      "id": "boj-2623",
+      "source": "boj",
+      "source_id": "2623",
+      "order": 372,
+      "tier": 2,
+      "tags": [
+        "위상정렬"
+      ],
+      "our_types": [
+        "위상정렬"
+      ]
+    },
+    {
+      "id": "boj-1043",
+      "source": "boj",
+      "source_id": "1043",
+      "order": 375,
+      "tier": 2,
+      "tags": [
+        "유니온 파인드"
+      ],
+      "our_types": [
+        "유니온 파인드"
+      ]
+    },
+    {
+      "id": "boj-4195",
+      "source": "boj",
+      "source_id": "4195",
+      "order": 376,
+      "tier": 2,
+      "tags": [
+        "유니온 파인드"
+      ],
+      "our_types": [
+        "유니온 파인드"
+      ]
+    },
+    {
+      "id": "boj-20040",
+      "source": "boj",
+      "source_id": "20040",
+      "order": 377,
+      "tier": 2,
+      "tags": [
+        "유니온 파인드"
+      ],
+      "our_types": [
+        "유니온 파인드"
+      ]
+    },
+    {
+      "id": "boj-1062",
+      "source": "boj",
+      "source_id": "1062",
+      "order": 380,
+      "tier": 2,
+      "tags": [
+        "비트마스크",
+        "완전탐색 · 백트래킹"
+      ],
+      "our_types": [
+        "비트마스크",
+        "완전탐색 · 백트래킹"
+      ]
+    },
+    {
+      "id": "boj-14391",
+      "source": "boj",
+      "source_id": "14391",
+      "order": 381,
+      "tier": 2,
+      "tags": [
+        "비트마스크"
+      ],
+      "our_types": [
+        "비트마스크"
+      ]
+    },
+    {
+      "id": "boj-14725",
+      "source": "boj",
+      "source_id": "14725",
+      "order": 385,
+      "tier": 2,
+      "tags": [
+        "트라이"
+      ],
+      "our_types": [
+        "트라이"
+      ]
+    },
+    {
+      "id": "boj-1922",
+      "source": "boj",
+      "source_id": "1922",
+      "order": 388,
+      "tier": 2,
+      "tags": [
+        "MST"
+      ],
+      "our_types": [
+        "MST"
+      ]
+    },
+    {
+      "id": "boj-1647",
+      "source": "boj",
+      "source_id": "1647",
+      "order": 389,
+      "tier": 2,
+      "tags": [
+        "MST"
+      ],
+      "our_types": [
+        "MST"
+      ]
+    },
+    {
+      "id": "boj-4386",
+      "source": "boj",
+      "source_id": "4386",
+      "order": 390,
+      "tier": 2,
+      "tags": [
+        "MST"
+      ],
+      "our_types": [
+        "MST"
+      ]
+    },
+    {
+      "id": "boj-2630",
+      "source": "boj",
+      "source_id": "2630",
+      "order": 392,
+      "tier": 1,
+      "tags": [
+        "재귀 · 분할정복"
+      ],
+      "our_types": [
+        "재귀 · 분할정복"
+      ]
+    },
+    {
+      "id": "boj-1992",
+      "source": "boj",
+      "source_id": "1992",
+      "order": 393,
+      "tier": 1,
+      "tags": [
+        "재귀 · 분할정복"
+      ],
+      "our_types": [
+        "재귀 · 분할정복"
+      ]
+    },
+    {
+      "id": "boj-1780",
+      "source": "boj",
+      "source_id": "1780",
+      "order": 394,
+      "tier": 1,
+      "tags": [
+        "재귀 · 분할정복"
+      ],
+      "our_types": [
+        "재귀 · 분할정복"
+      ]
+    },
+    {
+      "id": "boj-1074",
+      "source": "boj",
+      "source_id": "1074",
+      "order": 395,
+      "tier": 2,
+      "tags": [
+        "재귀 · 분할정복"
+      ],
+      "our_types": [
+        "재귀 · 분할정복"
+      ]
+    },
+    {
+      "id": "boj-1629",
+      "source": "boj",
+      "source_id": "1629",
+      "order": 396,
+      "tier": 1,
+      "tags": [
+        "재귀 · 분할정복"
+      ],
+      "our_types": [
+        "재귀 · 분할정복"
+      ]
+    },
+    {
+      "id": "boj-2407",
+      "source": "boj",
+      "source_id": "2407",
+      "order": 398,
+      "tier": 1,
+      "tags": [
+        "조합론 · 순열조합"
+      ],
+      "our_types": [
+        "조합론 · 순열조합"
+      ]
+    },
+    {
+      "id": "boj-11051",
+      "source": "boj",
+      "source_id": "11051",
+      "order": 399,
+      "tier": 1,
+      "tags": [
+        "조합론 · 순열조합"
+      ],
+      "our_types": [
+        "조합론 · 순열조합"
+      ]
+    },
+    {
+      "id": "lc-contains-duplicate",
+      "source": "leetcode",
+      "source_id": "contains-duplicate",
+      "order": 400,
+      "tier": 1,
+      "tags": [
+        "해시 · 맵 · 셋"
+      ],
+      "our_types": [
+        "해시 · 맵 · 셋"
+      ]
+    },
+    {
+      "id": "lc-valid-anagram",
+      "source": "leetcode",
+      "source_id": "valid-anagram",
+      "order": 401,
+      "tier": 1,
+      "tags": [
+        "해시 · 맵 · 셋",
+        "문자열 처리 · 파싱"
+      ],
+      "our_types": [
+        "해시 · 맵 · 셋",
+        "문자열 처리 · 파싱"
+      ]
+    },
+    {
+      "id": "lc-group-anagrams",
+      "source": "leetcode",
+      "source_id": "group-anagrams",
+      "order": 402,
+      "tier": 1,
+      "tags": [
+        "해시 · 맵 · 셋",
+        "문자열 처리 · 파싱"
+      ],
+      "our_types": [
+        "해시 · 맵 · 셋",
+        "문자열 처리 · 파싱"
+      ]
+    },
+    {
+      "id": "lc-top-k-frequent-elements",
+      "source": "leetcode",
+      "source_id": "top-k-frequent-elements",
+      "order": 403,
+      "tier": 1,
+      "tags": [
+        "해시 · 맵 · 셋",
+        "스택 · 큐 · 덱 · 힙"
+      ],
+      "our_types": [
+        "해시 · 맵 · 셋",
+        "스택 · 큐 · 덱 · 힙"
+      ]
+    },
+    {
+      "id": "lc-product-of-array-except-self",
+      "source": "leetcode",
+      "source_id": "product-of-array-except-self",
+      "order": 404,
+      "tier": 1,
+      "tags": [
+        "누적합 · 차분"
+      ],
+      "our_types": [
+        "누적합 · 차분"
+      ]
+    },
+    {
+      "id": "lc-longest-consecutive-sequence",
+      "source": "leetcode",
+      "source_id": "longest-consecutive-sequence",
+      "order": 405,
+      "tier": 2,
+      "tags": [
+        "해시 · 맵 · 셋"
+      ],
+      "our_types": [
+        "해시 · 맵 · 셋"
+      ]
+    },
+    {
+      "id": "lc-valid-palindrome",
+      "source": "leetcode",
+      "source_id": "valid-palindrome",
+      "order": 406,
+      "tier": 1,
+      "tags": [
+        "투포인터 · 슬라이딩 윈도우",
+        "문자열 처리 · 파싱"
+      ],
+      "our_types": [
+        "투포인터 · 슬라이딩 윈도우",
+        "문자열 처리 · 파싱"
+      ]
+    },
+    {
+      "id": "lc-two-sum-ii-input-array-is-sorted",
+      "source": "leetcode",
+      "source_id": "two-sum-ii-input-array-is-sorted",
+      "order": 407,
+      "tier": 1,
+      "tags": [
+        "투포인터 · 슬라이딩 윈도우"
+      ],
+      "our_types": [
+        "투포인터 · 슬라이딩 윈도우"
+      ]
+    },
+    {
+      "id": "lc-3sum",
+      "source": "leetcode",
+      "source_id": "3sum",
+      "order": 408,
+      "tier": 2,
+      "tags": [
+        "투포인터 · 슬라이딩 윈도우"
+      ],
+      "our_types": [
+        "투포인터 · 슬라이딩 윈도우"
+      ]
+    },
+    {
+      "id": "lc-container-with-most-water",
+      "source": "leetcode",
+      "source_id": "container-with-most-water",
+      "order": 409,
+      "tier": 1,
+      "tags": [
+        "투포인터 · 슬라이딩 윈도우"
+      ],
+      "our_types": [
+        "투포인터 · 슬라이딩 윈도우"
+      ]
+    },
+    {
+      "id": "lc-trapping-rain-water",
+      "source": "leetcode",
+      "source_id": "trapping-rain-water",
+      "order": 410,
+      "tier": 2,
+      "tags": [
+        "투포인터 · 슬라이딩 윈도우"
+      ],
+      "our_types": [
+        "투포인터 · 슬라이딩 윈도우"
+      ]
+    },
+    {
+      "id": "lc-best-time-to-buy-and-sell-stock",
+      "source": "leetcode",
+      "source_id": "best-time-to-buy-and-sell-stock",
+      "order": 411,
+      "tier": 1,
+      "tags": [
+        "동적 계획법",
+        "정렬 · 그리디"
+      ],
+      "our_types": [
+        "동적 계획법",
+        "정렬 · 그리디"
+      ]
+    },
+    {
+      "id": "lc-longest-repeating-character-replacement",
+      "source": "leetcode",
+      "source_id": "longest-repeating-character-replacement",
+      "order": 412,
+      "tier": 2,
+      "tags": [
+        "투포인터 · 슬라이딩 윈도우"
+      ],
+      "our_types": [
+        "투포인터 · 슬라이딩 윈도우"
+      ]
+    },
+    {
+      "id": "lc-permutation-in-string",
+      "source": "leetcode",
+      "source_id": "permutation-in-string",
+      "order": 413,
+      "tier": 1,
+      "tags": [
+        "투포인터 · 슬라이딩 윈도우"
+      ],
+      "our_types": [
+        "투포인터 · 슬라이딩 윈도우"
+      ]
+    },
+    {
+      "id": "lc-minimum-window-substring",
+      "source": "leetcode",
+      "source_id": "minimum-window-substring",
+      "order": 414,
+      "tier": 2,
+      "tags": [
+        "투포인터 · 슬라이딩 윈도우"
+      ],
+      "our_types": [
+        "투포인터 · 슬라이딩 윈도우"
+      ]
+    },
+    {
+      "id": "lc-sliding-window-maximum",
+      "source": "leetcode",
+      "source_id": "sliding-window-maximum",
+      "order": 415,
+      "tier": 2,
+      "tags": [
+        "투포인터 · 슬라이딩 윈도우",
+        "스택 · 큐 · 덱 · 힙"
+      ],
+      "our_types": [
+        "투포인터 · 슬라이딩 윈도우",
+        "스택 · 큐 · 덱 · 힙"
+      ]
+    },
+    {
+      "id": "lc-min-stack",
+      "source": "leetcode",
+      "source_id": "min-stack",
+      "order": 416,
+      "tier": 1,
+      "tags": [
+        "스택 · 큐 · 덱 · 힙"
+      ],
+      "our_types": [
+        "스택 · 큐 · 덱 · 힙"
+      ]
+    },
+    {
+      "id": "lc-evaluate-reverse-polish-notation",
+      "source": "leetcode",
+      "source_id": "evaluate-reverse-polish-notation",
+      "order": 417,
+      "tier": 1,
+      "tags": [
+        "스택 · 큐 · 덱 · 힙"
+      ],
+      "our_types": [
+        "스택 · 큐 · 덱 · 힙"
+      ]
+    },
+    {
+      "id": "lc-generate-parentheses",
+      "source": "leetcode",
+      "source_id": "generate-parentheses",
+      "order": 418,
+      "tier": 2,
+      "tags": [
+        "완전탐색 · 백트래킹",
+        "스택 · 큐 · 덱 · 힙"
+      ],
+      "our_types": [
+        "완전탐색 · 백트래킹",
+        "스택 · 큐 · 덱 · 힙"
+      ]
+    },
+    {
+      "id": "lc-daily-temperatures",
+      "source": "leetcode",
+      "source_id": "daily-temperatures",
+      "order": 419,
+      "tier": 1,
+      "tags": [
+        "스택 · 큐 · 덱 · 힙"
+      ],
+      "our_types": [
+        "스택 · 큐 · 덱 · 힙"
+      ]
+    },
+    {
+      "id": "lc-largest-rectangle-in-histogram",
+      "source": "leetcode",
+      "source_id": "largest-rectangle-in-histogram",
+      "order": 420,
+      "tier": 2,
+      "tags": [
+        "스택 · 큐 · 덱 · 힙"
+      ],
+      "our_types": [
+        "스택 · 큐 · 덱 · 힙"
+      ]
+    },
+    {
+      "id": "lc-search-a-2d-matrix",
+      "source": "leetcode",
+      "source_id": "search-a-2d-matrix",
+      "order": 421,
+      "tier": 1,
+      "tags": [
+        "이분탐색 · 파라메트릭 서치"
+      ],
+      "our_types": [
+        "이분탐색 · 파라메트릭 서치"
+      ]
+    },
+    {
+      "id": "lc-koko-eating-bananas",
+      "source": "leetcode",
+      "source_id": "koko-eating-bananas",
+      "order": 422,
+      "tier": 1,
+      "tags": [
+        "이분탐색 · 파라메트릭 서치"
+      ],
+      "our_types": [
+        "이분탐색 · 파라메트릭 서치"
+      ]
+    },
+    {
+      "id": "lc-find-minimum-in-rotated-sorted-array",
+      "source": "leetcode",
+      "source_id": "find-minimum-in-rotated-sorted-array",
+      "order": 423,
+      "tier": 1,
+      "tags": [
+        "이분탐색 · 파라메트릭 서치"
+      ],
+      "our_types": [
+        "이분탐색 · 파라메트릭 서치"
+      ]
+    },
+    {
+      "id": "lc-search-in-rotated-sorted-array",
+      "source": "leetcode",
+      "source_id": "search-in-rotated-sorted-array",
+      "order": 424,
+      "tier": 2,
+      "tags": [
+        "이분탐색 · 파라메트릭 서치"
+      ],
+      "our_types": [
+        "이분탐색 · 파라메트릭 서치"
+      ]
+    },
+    {
+      "id": "lc-reverse-linked-list",
+      "source": "leetcode",
+      "source_id": "reverse-linked-list",
+      "order": 425,
+      "tier": 1,
+      "tags": [
+        "구현 · 시뮬레이션"
+      ],
+      "our_types": [
+        "구현 · 시뮬레이션"
+      ]
+    },
+    {
+      "id": "lc-merge-two-sorted-lists",
+      "source": "leetcode",
+      "source_id": "merge-two-sorted-lists",
+      "order": 426,
+      "tier": 1,
+      "tags": [
+        "구현 · 시뮬레이션"
+      ],
+      "our_types": [
+        "구현 · 시뮬레이션"
+      ]
+    },
+    {
+      "id": "lc-linked-list-cycle",
+      "source": "leetcode",
+      "source_id": "linked-list-cycle",
+      "order": 427,
+      "tier": 1,
+      "tags": [
+        "구현 · 시뮬레이션"
+      ],
+      "our_types": [
+        "구현 · 시뮬레이션"
+      ]
+    },
+    {
+      "id": "lc-lru-cache",
+      "source": "leetcode",
+      "source_id": "lru-cache",
+      "order": 428,
+      "tier": 2,
+      "tags": [
+        "해시 · 맵 · 셋"
+      ],
+      "our_types": [
+        "해시 · 맵 · 셋"
+      ]
+    },
+    {
+      "id": "lc-invert-binary-tree",
+      "source": "leetcode",
+      "source_id": "invert-binary-tree",
+      "order": 429,
+      "tier": 1,
+      "tags": [
+        "트리"
+      ],
+      "our_types": [
+        "트리"
+      ]
+    },
+    {
+      "id": "lc-maximum-depth-of-binary-tree",
+      "source": "leetcode",
+      "source_id": "maximum-depth-of-binary-tree",
+      "order": 430,
+      "tier": 1,
+      "tags": [
+        "트리"
+      ],
+      "our_types": [
+        "트리"
+      ]
+    },
+    {
+      "id": "lc-diameter-of-binary-tree",
+      "source": "leetcode",
+      "source_id": "diameter-of-binary-tree",
+      "order": 431,
+      "tier": 1,
+      "tags": [
+        "트리"
+      ],
+      "our_types": [
+        "트리"
+      ]
+    },
+    {
+      "id": "lc-same-tree",
+      "source": "leetcode",
+      "source_id": "same-tree",
+      "order": 432,
+      "tier": 1,
+      "tags": [
+        "트리"
+      ],
+      "our_types": [
+        "트리"
+      ]
+    },
+    {
+      "id": "lc-binary-tree-level-order-traversal",
+      "source": "leetcode",
+      "source_id": "binary-tree-level-order-traversal",
+      "order": 433,
+      "tier": 1,
+      "tags": [
+        "트리",
+        "그래프 탐색 (DFS/BFS)"
+      ],
+      "our_types": [
+        "트리",
+        "그래프 탐색 (DFS/BFS)"
+      ]
+    },
+    {
+      "id": "lc-validate-binary-search-tree",
+      "source": "leetcode",
+      "source_id": "validate-binary-search-tree",
+      "order": 434,
+      "tier": 2,
+      "tags": [
+        "트리"
+      ],
+      "our_types": [
+        "트리"
+      ]
+    },
+    {
+      "id": "lc-lowest-common-ancestor-of-a-binary-tree",
+      "source": "leetcode",
+      "source_id": "lowest-common-ancestor-of-a-binary-tree",
+      "order": 435,
+      "tier": 2,
+      "tags": [
+        "트리"
+      ],
+      "our_types": [
+        "트리"
+      ]
+    },
+    {
+      "id": "lc-kth-smallest-element-in-a-bst",
+      "source": "leetcode",
+      "source_id": "kth-smallest-element-in-a-bst",
+      "order": 436,
+      "tier": 1,
+      "tags": [
+        "트리"
+      ],
+      "our_types": [
+        "트리"
+      ]
+    },
+    {
+      "id": "lc-construct-binary-tree-from-preorder-and-inorder-traversal",
+      "source": "leetcode",
+      "source_id": "construct-binary-tree-from-preorder-and-inorder-traversal",
+      "order": 437,
+      "tier": 2,
+      "tags": [
+        "트리"
+      ],
+      "our_types": [
+        "트리"
+      ]
+    },
+    {
+      "id": "lc-implement-trie-prefix-tree",
+      "source": "leetcode",
+      "source_id": "implement-trie-prefix-tree",
+      "order": 438,
+      "tier": 2,
+      "tags": [
+        "트라이"
+      ],
+      "our_types": [
+        "트라이"
+      ]
+    },
+    {
+      "id": "lc-design-add-and-search-words-data-structure",
+      "source": "leetcode",
+      "source_id": "design-add-and-search-words-data-structure",
+      "order": 439,
+      "tier": 2,
+      "tags": [
+        "트라이"
+      ],
+      "our_types": [
+        "트라이"
+      ]
+    },
+    {
+      "id": "lc-last-stone-weight",
+      "source": "leetcode",
+      "source_id": "last-stone-weight",
+      "order": 440,
+      "tier": 1,
+      "tags": [
+        "스택 · 큐 · 덱 · 힙"
+      ],
+      "our_types": [
+        "스택 · 큐 · 덱 · 힙"
+      ]
+    },
+    {
+      "id": "lc-k-closest-points-to-origin",
+      "source": "leetcode",
+      "source_id": "k-closest-points-to-origin",
+      "order": 441,
+      "tier": 1,
+      "tags": [
+        "스택 · 큐 · 덱 · 힙"
+      ],
+      "our_types": [
+        "스택 · 큐 · 덱 · 힙"
+      ]
+    },
+    {
+      "id": "lc-find-median-from-data-stream",
+      "source": "leetcode",
+      "source_id": "find-median-from-data-stream",
+      "order": 442,
+      "tier": 2,
+      "tags": [
+        "스택 · 큐 · 덱 · 힙"
+      ],
+      "our_types": [
+        "스택 · 큐 · 덱 · 힙"
+      ]
+    },
+    {
+      "id": "lc-task-scheduler",
+      "source": "leetcode",
+      "source_id": "task-scheduler",
+      "order": 443,
+      "tier": 2,
+      "tags": [
+        "스택 · 큐 · 덱 · 힙",
+        "정렬 · 그리디"
+      ],
+      "our_types": [
+        "스택 · 큐 · 덱 · 힙",
+        "정렬 · 그리디"
+      ]
+    },
+    {
+      "id": "lc-subsets",
+      "source": "leetcode",
+      "source_id": "subsets",
+      "order": 444,
+      "tier": 1,
+      "tags": [
+        "완전탐색 · 백트래킹"
+      ],
+      "our_types": [
+        "완전탐색 · 백트래킹"
+      ]
+    },
+    {
+      "id": "lc-combination-sum",
+      "source": "leetcode",
+      "source_id": "combination-sum",
+      "order": 445,
+      "tier": 1,
+      "tags": [
+        "완전탐색 · 백트래킹"
+      ],
+      "our_types": [
+        "완전탐색 · 백트래킹"
+      ]
+    },
+    {
+      "id": "lc-permutations",
+      "source": "leetcode",
+      "source_id": "permutations",
+      "order": 446,
+      "tier": 1,
+      "tags": [
+        "완전탐색 · 백트래킹",
+        "조합론 · 순열조합"
+      ],
+      "our_types": [
+        "완전탐색 · 백트래킹",
+        "조합론 · 순열조합"
+      ]
+    },
+    {
+      "id": "lc-word-search",
+      "source": "leetcode",
+      "source_id": "word-search",
+      "order": 447,
+      "tier": 2,
+      "tags": [
+        "완전탐색 · 백트래킹"
+      ],
+      "our_types": [
+        "완전탐색 · 백트래킹"
+      ]
+    },
+    {
+      "id": "lc-letter-combinations-of-a-phone-number",
+      "source": "leetcode",
+      "source_id": "letter-combinations-of-a-phone-number",
+      "order": 448,
+      "tier": 1,
+      "tags": [
+        "완전탐색 · 백트래킹"
+      ],
+      "our_types": [
+        "완전탐색 · 백트래킹"
+      ]
+    },
+    {
+      "id": "lc-n-queens",
+      "source": "leetcode",
+      "source_id": "n-queens",
+      "order": 449,
+      "tier": 2,
+      "tags": [
+        "완전탐색 · 백트래킹"
+      ],
+      "our_types": [
+        "완전탐색 · 백트래킹"
+      ]
+    },
+    {
+      "id": "lc-clone-graph",
+      "source": "leetcode",
+      "source_id": "clone-graph",
+      "order": 450,
+      "tier": 2,
+      "tags": [
+        "그래프 탐색 (DFS/BFS)"
+      ],
+      "our_types": [
+        "그래프 탐색 (DFS/BFS)"
+      ]
+    },
+    {
+      "id": "lc-rotting-oranges",
+      "source": "leetcode",
+      "source_id": "rotting-oranges",
+      "order": 451,
+      "tier": 1,
+      "tags": [
+        "그래프 탐색 (DFS/BFS)"
+      ],
+      "our_types": [
+        "그래프 탐색 (DFS/BFS)"
+      ]
+    },
+    {
+      "id": "lc-course-schedule-ii",
+      "source": "leetcode",
+      "source_id": "course-schedule-ii",
+      "order": 452,
+      "tier": 2,
+      "tags": [
+        "위상정렬"
+      ],
+      "our_types": [
+        "위상정렬"
+      ]
+    },
+    {
+      "id": "lc-word-ladder",
+      "source": "leetcode",
+      "source_id": "word-ladder",
+      "order": 453,
+      "tier": 2,
+      "tags": [
+        "그래프 탐색 (DFS/BFS)"
+      ],
+      "our_types": [
+        "그래프 탐색 (DFS/BFS)"
+      ]
+    },
+    {
+      "id": "lc-pacific-atlantic-water-flow",
+      "source": "leetcode",
+      "source_id": "pacific-atlantic-water-flow",
+      "order": 454,
+      "tier": 2,
+      "tags": [
+        "그래프 탐색 (DFS/BFS)"
+      ],
+      "our_types": [
+        "그래프 탐색 (DFS/BFS)"
+      ]
+    },
+    {
+      "id": "lc-max-area-of-island",
+      "source": "leetcode",
+      "source_id": "max-area-of-island",
+      "order": 455,
+      "tier": 1,
+      "tags": [
+        "그래프 탐색 (DFS/BFS)"
+      ],
+      "our_types": [
+        "그래프 탐색 (DFS/BFS)"
+      ]
+    },
+    {
+      "id": "lc-network-delay-time",
+      "source": "leetcode",
+      "source_id": "network-delay-time",
+      "order": 456,
+      "tier": 2,
+      "tags": [
+        "최단경로"
+      ],
+      "our_types": [
+        "최단경로"
+      ]
+    },
+    {
+      "id": "lc-cheapest-flights-within-k-stops",
+      "source": "leetcode",
+      "source_id": "cheapest-flights-within-k-stops",
+      "order": 457,
+      "tier": 2,
+      "tags": [
+        "최단경로"
+      ],
+      "our_types": [
+        "최단경로"
+      ]
+    },
+    {
+      "id": "lc-min-cost-to-connect-all-points",
+      "source": "leetcode",
+      "source_id": "min-cost-to-connect-all-points",
+      "order": 458,
+      "tier": 2,
+      "tags": [
+        "MST"
+      ],
+      "our_types": [
+        "MST"
+      ]
+    },
+    {
+      "id": "lc-house-robber",
+      "source": "leetcode",
+      "source_id": "house-robber",
+      "order": 459,
+      "tier": 1,
+      "tags": [
+        "동적 계획법"
+      ],
+      "our_types": [
+        "동적 계획법"
+      ]
+    },
+    {
+      "id": "lc-longest-increasing-subsequence",
+      "source": "leetcode",
+      "source_id": "longest-increasing-subsequence",
+      "order": 460,
+      "tier": 2,
+      "tags": [
+        "동적 계획법"
+      ],
+      "our_types": [
+        "동적 계획법"
+      ]
+    },
+    {
+      "id": "lc-unique-paths",
+      "source": "leetcode",
+      "source_id": "unique-paths",
+      "order": 461,
+      "tier": 1,
+      "tags": [
+        "동적 계획법"
+      ],
+      "our_types": [
+        "동적 계획법"
+      ]
+    },
+    {
+      "id": "lc-longest-common-subsequence",
+      "source": "leetcode",
+      "source_id": "longest-common-subsequence",
+      "order": 462,
+      "tier": 2,
+      "tags": [
+        "동적 계획법"
+      ],
+      "our_types": [
+        "동적 계획법"
+      ]
+    },
+    {
+      "id": "lc-word-break",
+      "source": "leetcode",
+      "source_id": "word-break",
+      "order": 463,
+      "tier": 2,
+      "tags": [
+        "동적 계획법"
+      ],
+      "our_types": [
+        "동적 계획법"
+      ]
+    },
+    {
+      "id": "lc-maximum-subarray",
+      "source": "leetcode",
+      "source_id": "maximum-subarray",
+      "order": 464,
+      "tier": 1,
+      "tags": [
+        "동적 계획법",
+        "정렬 · 그리디"
+      ],
+      "our_types": [
+        "동적 계획법",
+        "정렬 · 그리디"
+      ]
+    },
+    {
+      "id": "lc-jump-game",
+      "source": "leetcode",
+      "source_id": "jump-game",
+      "order": 465,
+      "tier": 1,
+      "tags": [
+        "정렬 · 그리디",
+        "동적 계획법"
+      ],
+      "our_types": [
+        "정렬 · 그리디",
+        "동적 계획법"
+      ]
+    },
+    {
+      "id": "lc-partition-equal-subset-sum",
+      "source": "leetcode",
+      "source_id": "partition-equal-subset-sum",
+      "order": 466,
+      "tier": 2,
+      "tags": [
+        "동적 계획법"
+      ],
+      "our_types": [
+        "동적 계획법"
+      ]
+    },
+    {
+      "id": "lc-edit-distance",
+      "source": "leetcode",
+      "source_id": "edit-distance",
+      "order": 467,
+      "tier": 2,
+      "tags": [
+        "동적 계획법"
+      ],
+      "our_types": [
+        "동적 계획법"
+      ]
+    },
+    {
+      "id": "lc-decode-ways",
+      "source": "leetcode",
+      "source_id": "decode-ways",
+      "order": 468,
+      "tier": 2,
+      "tags": [
+        "동적 계획법"
+      ],
+      "our_types": [
+        "동적 계획법"
+      ]
+    },
+    {
+      "id": "lc-coin-change-ii",
+      "source": "leetcode",
+      "source_id": "coin-change-ii",
+      "order": 469,
+      "tier": 2,
+      "tags": [
+        "동적 계획법"
+      ],
+      "our_types": [
+        "동적 계획법"
+      ]
+    },
+    {
+      "id": "lc-merge-intervals",
+      "source": "leetcode",
+      "source_id": "merge-intervals",
+      "order": 470,
+      "tier": 1,
+      "tags": [
+        "정렬 · 그리디"
+      ],
+      "our_types": [
+        "정렬 · 그리디"
+      ]
+    },
+    {
+      "id": "lc-insert-interval",
+      "source": "leetcode",
+      "source_id": "insert-interval",
+      "order": 471,
+      "tier": 1,
+      "tags": [
+        "정렬 · 그리디"
+      ],
+      "our_types": [
+        "정렬 · 그리디"
+      ]
+    },
+    {
+      "id": "lc-non-overlapping-intervals",
+      "source": "leetcode",
+      "source_id": "non-overlapping-intervals",
+      "order": 472,
+      "tier": 1,
+      "tags": [
+        "정렬 · 그리디"
+      ],
+      "our_types": [
+        "정렬 · 그리디"
+      ]
+    },
+    {
+      "id": "lc-jump-game-ii",
+      "source": "leetcode",
+      "source_id": "jump-game-ii",
+      "order": 473,
+      "tier": 2,
+      "tags": [
+        "정렬 · 그리디"
+      ],
+      "our_types": [
+        "정렬 · 그리디"
+      ]
+    },
+    {
+      "id": "lc-gas-station",
+      "source": "leetcode",
+      "source_id": "gas-station",
+      "order": 474,
+      "tier": 2,
+      "tags": [
+        "정렬 · 그리디"
+      ],
+      "our_types": [
+        "정렬 · 그리디"
+      ]
+    },
+    {
+      "id": "lc-rotate-image",
+      "source": "leetcode",
+      "source_id": "rotate-image",
+      "order": 475,
+      "tier": 1,
+      "tags": [
+        "구현 · 시뮬레이션"
+      ],
+      "our_types": [
+        "구현 · 시뮬레이션"
+      ]
+    },
+    {
+      "id": "lc-spiral-matrix",
+      "source": "leetcode",
+      "source_id": "spiral-matrix",
+      "order": 476,
+      "tier": 1,
+      "tags": [
+        "구현 · 시뮬레이션"
+      ],
+      "our_types": [
+        "구현 · 시뮬레이션"
+      ]
+    },
+    {
+      "id": "cf-4-C",
+      "source": "codeforces",
+      "source_id": "4-C",
+      "order": 600,
+      "tier": 1,
+      "tags": [
+        "해시 · 맵 · 셋"
+      ],
+      "our_types": [
+        "해시 · 맵 · 셋"
+      ]
+    },
+    {
+      "id": "cf-279-B",
+      "source": "codeforces",
+      "source_id": "279-B",
+      "order": 601,
+      "tier": 1,
+      "tags": [
+        "투포인터 · 슬라이딩 윈도우"
+      ],
+      "our_types": [
+        "투포인터 · 슬라이딩 윈도우"
+      ]
+    },
+    {
+      "id": "cf-363-B",
+      "source": "codeforces",
+      "source_id": "363-B",
+      "order": 602,
+      "tier": 1,
+      "tags": [
+        "누적합 · 차분"
+      ],
+      "our_types": [
+        "누적합 · 차분"
+      ]
+    },
+    {
+      "id": "cf-433-B",
+      "source": "codeforces",
+      "source_id": "433-B",
+      "order": 603,
+      "tier": 1,
+      "tags": [
+        "누적합 · 차분",
+        "정렬 · 그리디"
+      ],
+      "our_types": [
+        "누적합 · 차분",
+        "정렬 · 그리디"
+      ]
+    },
+    {
+      "id": "cf-455-A",
+      "source": "codeforces",
+      "source_id": "455-A",
+      "order": 604,
+      "tier": 2,
+      "tags": [
+        "동적 계획법"
+      ],
+      "our_types": [
+        "동적 계획법"
+      ]
+    },
+    {
+      "id": "cf-466-C",
+      "source": "codeforces",
+      "source_id": "466-C",
+      "order": 605,
+      "tier": 2,
+      "tags": [
+        "누적합 · 차분"
+      ],
+      "our_types": [
+        "누적합 · 차분"
+      ]
+    },
+    {
+      "id": "cf-474-B",
+      "source": "codeforces",
+      "source_id": "474-B",
+      "order": 606,
+      "tier": 1,
+      "tags": [
+        "이분탐색 · 파라메트릭 서치"
+      ],
+      "our_types": [
+        "이분탐색 · 파라메트릭 서치"
+      ]
+    },
+    {
+      "id": "cf-492-B",
+      "source": "codeforces",
+      "source_id": "492-B",
+      "order": 607,
+      "tier": 1,
+      "tags": [
+        "이분탐색 · 파라메트릭 서치",
+        "정렬 · 그리디"
+      ],
+      "our_types": [
+        "이분탐색 · 파라메트릭 서치",
+        "정렬 · 그리디"
+      ]
+    },
+    {
+      "id": "cf-520-B",
+      "source": "codeforces",
+      "source_id": "520-B",
+      "order": 608,
+      "tier": 1,
+      "tags": [
+        "그래프 탐색 (DFS/BFS)"
+      ],
+      "our_types": [
+        "그래프 탐색 (DFS/BFS)"
+      ]
+    },
+    {
+      "id": "cf-545-C",
+      "source": "codeforces",
+      "source_id": "545-C",
+      "order": 609,
+      "tier": 2,
+      "tags": [
+        "정렬 · 그리디"
+      ],
+      "our_types": [
+        "정렬 · 그리디"
+      ]
+    },
+    {
+      "id": "cf-580-A",
+      "source": "codeforces",
+      "source_id": "580-A",
+      "order": 610,
+      "tier": 1,
+      "tags": [
+        "구현 · 시뮬레이션"
+      ],
+      "our_types": [
+        "구현 · 시뮬레이션"
+      ]
+    },
+    {
+      "id": "cf-580-B",
+      "source": "codeforces",
+      "source_id": "580-B",
+      "order": 611,
+      "tier": 1,
+      "tags": [
+        "투포인터 · 슬라이딩 윈도우"
+      ],
+      "our_types": [
+        "투포인터 · 슬라이딩 윈도우"
+      ]
+    },
+    {
+      "id": "cf-600-B",
+      "source": "codeforces",
+      "source_id": "600-B",
+      "order": 612,
+      "tier": 1,
+      "tags": [
+        "이분탐색 · 파라메트릭 서치"
+      ],
+      "our_types": [
+        "이분탐색 · 파라메트릭 서치"
+      ]
+    },
+    {
+      "id": "cf-702-C",
+      "source": "codeforces",
+      "source_id": "702-C",
+      "order": 613,
+      "tier": 2,
+      "tags": [
+        "이분탐색 · 파라메트릭 서치"
+      ],
+      "our_types": [
+        "이분탐색 · 파라메트릭 서치"
+      ]
+    },
+    {
+      "id": "cf-706-C",
+      "source": "codeforces",
+      "source_id": "706-C",
+      "order": 614,
+      "tier": 2,
+      "tags": [
+        "동적 계획법",
+        "문자열 처리 · 파싱"
+      ],
+      "our_types": [
+        "동적 계획법",
+        "문자열 처리 · 파싱"
+      ]
+    },
+    {
+      "id": "cf-977-C",
+      "source": "codeforces",
+      "source_id": "977-C",
+      "order": 615,
+      "tier": 1,
+      "tags": [
+        "이분탐색 · 파라메트릭 서치"
+      ],
+      "our_types": [
+        "이분탐색 · 파라메트릭 서치"
+      ]
+    },
+    {
+      "id": "cf-1201-C",
+      "source": "codeforces",
+      "source_id": "1201-C",
+      "order": 616,
+      "tier": 2,
+      "tags": [
+        "이분탐색 · 파라메트릭 서치"
+      ],
+      "our_types": [
+        "이분탐색 · 파라메트릭 서치"
+      ]
+    },
+    {
+      "id": "cf-1472-C",
+      "source": "codeforces",
+      "source_id": "1472-C",
+      "order": 617,
+      "tier": 1,
+      "tags": [
+        "동적 계획법"
+      ],
+      "our_types": [
+        "동적 계획법"
+      ]
+    },
+    {
+      "id": "cf-1873-E",
+      "source": "codeforces",
+      "source_id": "1873-E",
+      "order": 618,
+      "tier": 2,
+      "tags": [
+        "이분탐색 · 파라메트릭 서치"
+      ],
+      "our_types": [
+        "이분탐색 · 파라메트릭 서치"
+      ]
+    },
+    {
+      "id": "cf-377-A",
+      "source": "codeforces",
+      "source_id": "377-A",
+      "order": 619,
+      "tier": 2,
+      "tags": [
+        "그래프 탐색 (DFS/BFS)"
+      ],
+      "our_types": [
+        "그래프 탐색 (DFS/BFS)"
+      ]
+    },
+    {
+      "id": "cf-598-D",
+      "source": "codeforces",
+      "source_id": "598-D",
+      "order": 620,
+      "tier": 2,
+      "tags": [
+        "그래프 탐색 (DFS/BFS)"
+      ],
+      "our_types": [
+        "그래프 탐색 (DFS/BFS)"
+      ]
+    },
+    {
+      "id": "cf-277-A",
+      "source": "codeforces",
+      "source_id": "277-A",
+      "order": 621,
+      "tier": 2,
+      "tags": [
+        "유니온 파인드"
+      ],
+      "our_types": [
+        "유니온 파인드"
+      ]
+    }
+  ]
+}
