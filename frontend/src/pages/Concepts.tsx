@@ -1,7 +1,8 @@
 import { useEffect, useMemo, useRef } from "react";
-import { Link, useLocation } from "react-router-dom";
+import { Link, useLocation, useNavigate } from "react-router-dom";
 import { AuthUser } from "../api";
 import PageHeader from "../components/PageHeader";
+import Select from "../components/Select";
 import {
   CONCEPT_GROUPS,
   CONCEPTS,
@@ -57,6 +58,7 @@ export default function Concepts({
   onLogout: () => void;
 }) {
   const loc = useLocation();
+  const navigate = useNavigate();
   const articleRef = useRef<HTMLElement>(null);
   const selected = useMemo(() => {
     const id = decodeURIComponent((loc.hash || "").replace(/^#/, ""));
@@ -64,14 +66,26 @@ export default function Concepts({
   }, [loc.hash]);
 
   useEffect(() => {
-    articleRef.current?.scrollTo(0, 0);
-    const on = document.querySelector(".concepts-toc a.on");
-    on?.scrollIntoView({ block: "nearest" });
+    if (window.matchMedia("(min-width: 961px)").matches) {
+      articleRef.current?.scrollTo(0, 0);
+      document.querySelector(".concepts-toc a.on")?.scrollIntoView({ block: "nearest" });
+    }
   }, [selected.id]);
 
   return (
     <div className="page concepts-page">
       <PageHeader title="Concepts" />
+      <div className="mobile-concept-picker">
+        <span>개념 목차</span>
+        <Select
+          ariaLabel="개념 목차"
+          value={selected.id}
+          onChange={(id) => navigate(`/concepts#${id}`, { replace: true })}
+          options={CONCEPT_GROUPS.flatMap((group) =>
+            group.items.map((concept) => ({ value: concept.id, label: concept.title })),
+          )}
+        />
+      </div>
       <div className="concepts-split">
         <nav className="concepts-toc" aria-label="개념 목차">
           {CONCEPT_GROUPS.map((g) => (
@@ -87,6 +101,7 @@ export default function Concepts({
                   replace
                   preventScrollReset
                   className={c.id === selected.id ? "on" : undefined}
+                  aria-current={c.id === selected.id ? "location" : undefined}
                 >
                   <em>{String(i + 1).padStart(2, "0")}</em>
                   {c.title}
@@ -104,7 +119,7 @@ export default function Concepts({
             <section>
               <h4>목록</h4>
               <div className="table-shell">
-                <table className="prob-table later-table">
+                <table className="prob-table later-table" role="table" aria-label="후순위 유형">
                   <thead>
                     <tr>
                       <th>유형</th>
@@ -116,8 +131,8 @@ export default function Concepts({
                     {selected.laterRows.map((row) => (
                       <tr key={row.name}>
                         <td>{row.name}</td>
-                        <td>{row.when}</td>
-                        <td>{row.advice}</td>
+                        <td data-label="언제">{row.when}</td>
+                        <td data-label="메모">{row.advice}</td>
                       </tr>
                     ))}
                   </tbody>

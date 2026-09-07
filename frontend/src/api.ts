@@ -151,11 +151,20 @@ function asStringList(value: unknown): string[] {
   return Array.isArray(value) ? value.filter((x): x is string => typeof x === "string") : [];
 }
 
+function codeforcesTitle(row: ProblemRow) {
+  const raw = row.source_id || row.id.replace(/^cf-/, "");
+  const m = raw.match(/^(\d+)[-_]?([A-Za-z]\d*)$/);
+  if (!m) return row.title;
+  const official = `${m[1]}${m[2].toUpperCase()}`;
+  if (row.title.toUpperCase().startsWith(official)) return row.title;
+  return `${official}. ${row.title.replace(/^[A-Z]\d*\.\s*/i, "").trim() || row.title}`;
+}
+
 function mapListItem(row: ProblemRow, status = "todo"): ProblemListItem {
   const source_tags = asStringList(row.source_tags).length ? asStringList(row.source_tags) : asStringList(row.tags);
   return {
     id: row.id,
-    title: row.title,
+    title: row.source === "codeforces" ? codeforcesTitle(row) : row.title,
     difficulty: row.source_difficulty || row.difficulty || "",
     source_difficulty: row.source_difficulty || row.difficulty || "",
     source_tags,

@@ -246,11 +246,11 @@ export default function History({
     <div className="page">
       <PageHeader title="History" />
       <main className="list-main history-main">
-        <div className="filters hist-filters" role="tablist" aria-label="Submission filter">
+        <div className="filters hist-filters" role="group" aria-label="Submission filter">
           <button
             type="button"
             className={filter === "all" ? "seg on" : "seg"}
-            aria-selected={filter === "all"}
+            aria-pressed={filter === "all"}
             onClick={() => setFilter("all")}
           >
             All
@@ -258,7 +258,7 @@ export default function History({
           <button
             type="button"
             className={filter === "mine" ? "seg on" : "seg"}
-            aria-selected={filter === "mine"}
+            aria-pressed={filter === "mine"}
             onClick={() => setFilter("mine")}
           >
             Mine
@@ -266,7 +266,7 @@ export default function History({
         </div>
         {err ? <div className="error">{err}</div> : null}
         <div className="table-shell">
-          <table className="prob-table">
+          <table className="prob-table history-table" role="table" aria-label="Submission history">
             <thead>
               <tr>
                 <th>Username</th>
@@ -286,29 +286,36 @@ export default function History({
                       tabIndex={0}
                       onClick={() => setOpenId(open ? null : s.id)}
                       onKeyDown={(e) => {
-                        if (e.key === "Enter" || e.key === " ") {
+                        if (e.target === e.currentTarget && (e.key === "Enter" || e.key === " ")) {
                           e.preventDefault();
                           setOpenId(open ? null : s.id);
                         }
                       }}
                     >
-                      <td>{s.nickname}</td>
-                      <td>
+                      <td data-label="Username">{s.nickname}</td>
+                      <td className="history-problem" data-label="Problem">
                         <Link to={`/problems/${s.problem_id}`} onClick={(e) => e.stopPropagation()}>
                           {s.problem_title}
                         </Link>
                       </td>
-                      <td>{LANG_LABEL[s.language] || s.language}</td>
-                      <td>
+                      <td data-label="Language">{LANG_LABEL[s.language] || s.language}</td>
+                      <td data-label="Result">
                         <span className={`st ${s.verdict === "AC" ? "st-solved" : "st-tried"}`}>
                           {verdictLabel(s.verdict, s.origin)} ({s.passed}/{s.total})
                         </span>
                       </td>
-                      <td>{when(s.created_at)}</td>
+                      <td data-label="Submitted">
+                        <time dateTime={s.created_at}>{when(s.created_at)}</time>
+                        <button type="button" className="history-details-button"
+                          aria-expanded={open} aria-controls={open ? `submission-${s.id}` : undefined}
+                          onClick={(event) => { event.stopPropagation(); setOpenId(open ? null : s.id); }}>
+                          {open ? "Hide details −" : "View details +"}
+                        </button>
+                      </td>
                     </tr>
                     {open ? (
                       <tr className="hist-expand">
-                        <td colSpan={5}>
+                        <td colSpan={5} id={`submission-${s.id}`}>
                           <Detail id={s.id} userId={user.id} />
                         </td>
                       </tr>

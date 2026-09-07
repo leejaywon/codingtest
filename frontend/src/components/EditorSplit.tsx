@@ -2,7 +2,6 @@ import { useEffect, useRef, useState, type ReactNode } from "react";
 
 const MIN_OUTPUT = 120;
 const MIN_EDITOR = 160;
-const HANDLE_HEIGHT = 9;
 
 export default function EditorSplit({ editor, output }: { editor: ReactNode; output: ReactNode }) {
   const container = useRef<HTMLDivElement>(null);
@@ -17,7 +16,8 @@ export default function EditorSplit({ editor, output }: { editor: ReactNode; out
     if (!node) return;
     const observer = new ResizeObserver(() => {
       const min = Number(getComputedStyle(node).getPropertyValue("--min-output-height")) || MIN_OUTPUT;
-      const max = Math.max(min, node.clientHeight - MIN_EDITOR - HANDLE_HEIGHT);
+      const handle = parseFloat(getComputedStyle(node).getPropertyValue("--resize-handle-height")) || 9;
+      const max = Math.max(min, node.clientHeight - MIN_EDITOR - handle);
       setMinimum(min);
       setMaximum(max);
       setHeight((value) => Math.max(min, Math.min(max, value)));
@@ -31,7 +31,7 @@ export default function EditorSplit({ editor, output }: { editor: ReactNode; out
   }
 
   return (
-    <div ref={container} className={`editor-split${dragging ? " is-resizing" : ""}`} style={{ gridTemplateRows: `minmax(${MIN_EDITOR}px, 1fr) ${HANDLE_HEIGHT}px ${height}px` }}>
+    <div ref={container} className={`editor-split${dragging ? " is-resizing" : ""}`} style={{ gridTemplateRows: `var(--editor-split-rows, minmax(${MIN_EDITOR}px, 1fr) var(--resize-handle-height, 9px) minmax(${height}px, max-content))` }}>
       {editor}
       <div
         className="io-resizer"

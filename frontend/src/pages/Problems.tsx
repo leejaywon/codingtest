@@ -2,6 +2,7 @@ import { useEffect, useMemo, useState } from "react";
 import { Link, useSearchParams } from "react-router-dom";
 import { AuthUser, api, ProblemListItem } from "../api";
 import Select from "../components/Select";
+import Difficulty from "../components/Difficulty";
 
 function join(values: string[]) {
   return values.length ? values.join(", ") : "–";
@@ -94,7 +95,7 @@ export default function Problems({
     <div className="page problems-page">
       <main className="list-main problems-main" aria-label="Problems">
         <div className="filters">
-          <input aria-label="검색" placeholder="검색" value={q} onChange={(e) => setQ(e.target.value)} />
+          <input type="search" aria-label="검색" placeholder="제목, 유형 검색" value={q} onChange={(e) => setQ(e.target.value)} />
           <Select
             ariaLabel="출처"
             value={src}
@@ -117,6 +118,30 @@ export default function Problems({
           />
         </div>
         {err ? <div className="error">{err}</div> : null}
+        <div className="mobile-problem-tools">
+          <span role="status">{filtered.length} problems</span>
+          <button type="button" onClick={cycleDiffSort}>
+            난이도 {diffSort === "asc" ? "낮은 순 ↑" : diffSort === "desc" ? "높은 순 ↓" : "정렬 ↕"}
+          </button>
+        </div>
+        <ul className="problem-cards" aria-label="문제 목록">
+          {filtered.map((p) => (
+            <li key={p.id}>
+              <Link className="problem-card" to={`/problems/${p.id}`}>
+                <span className="problem-card-meta">
+                  <span className="src">{p.source_label}</span>
+                  <Difficulty source={p.source} label={p.source_difficulty} />
+                  <span className={`st st-${p.status}`}>
+                    {p.status === "solved" ? "맞음" : p.status === "tried" ? "시도" : "미풀이"}
+                  </span>
+                </span>
+                <strong>{p.title}<span aria-hidden="true">›</span></strong>
+                <span className="problem-card-topics">{join(p.our_types || [])}</span>
+                {p.source_tags?.length ? <span className="problem-card-tags">사이트 유형 · {join(p.source_tags)}</span> : null}
+              </Link>
+            </li>
+          ))}
+        </ul>
         <div className="table-shell" tabIndex={0} role="region" aria-label="문제 목록">
           <table className="prob-table">
             <thead>
@@ -166,9 +191,9 @@ export default function Problems({
                     </span>
                   </td>
                   <td>
-                    <span className={`src src-${p.source}`}>{p.source_label}</span>
+                    <span className="src">{p.source_label}</span>
                   </td>
-                  <td>{p.source_difficulty || "–"}</td>
+                  <td><Difficulty source={p.source} label={p.source_difficulty} /></td>
                   <td className="tags">{join(p.source_tags || [])}</td>
                   <td className="tags">{join(p.our_types || [])}</td>
                   <td>
@@ -181,7 +206,7 @@ export default function Problems({
         </div>
         {filtered.length === 0 ? (
           <p className="muted empty-hint">
-            No problems yet.
+            {items.length ? "검색 조건에 맞는 문제가 없습니다." : "No problems yet."}
           </p>
         ) : null}
       </main>

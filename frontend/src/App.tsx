@@ -1,4 +1,4 @@
-import { Navigate, Route, Routes } from "react-router-dom";
+import { Navigate, Route, Routes, useLocation } from "react-router-dom";
 import { useEffect, useState } from "react";
 import { AuthUser, api } from "./api";
 import Chassis from "./components/Chassis";
@@ -11,7 +11,12 @@ import Solve from "./pages/Solve";
 import { supabase } from "./lib/supabase";
 
 export default function App() {
+  const { pathname } = useLocation();
   const [user, setUser] = useState<AuthUser | null | undefined>(undefined);
+
+  useEffect(() => {
+    if (window.matchMedia("(max-width: 760px)").matches) window.scrollTo(0, 0);
+  }, [pathname]);
 
   useEffect(() => {
     let cancelled = false;
