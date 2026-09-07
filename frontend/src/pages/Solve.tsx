@@ -1,8 +1,10 @@
 import Editor, { type BeforeMount } from "@monaco-editor/react";
-import { useEffect, useMemo, useState } from "react";
+import { useEffect, useLayoutEffect, useMemo, useRef, useState } from "react";
 import { Link, useParams } from "react-router-dom";
 import { AuthUser, api, ProblemDetail } from "../api";
 import EditorSplit from "../components/EditorSplit";
+import AutoGrowTextarea from "../components/AutoGrowTextarea";
+import Difficulty from "../components/Difficulty";
 import { PYTHON_LANGUAGE } from "../data/catalog";
 import { verdictLabel } from "../lib/verdicts";
 
@@ -80,10 +82,19 @@ export default function Solve({
   const [code, setCode] = useState("");
   const [stdin, setStdin] = useState("");
   const [busy, setBusy] = useState(false);
+  const [mobilePane, setMobilePane] = useState<"problem" | "code">("problem");
+  const workspaceRef = useRef<HTMLDivElement>(null);
   const [runtimeReady, setRuntimeReady] = useState(false);
   const [err, setErr] = useState("");
   const [runResult, setRunResult] = useState<Awaited<ReturnType<typeof api.run>> | null>(null);
   const [judge, setJudge] = useState<Awaited<ReturnType<typeof api.submit>> | null>(null);
+
+  useLayoutEffect(() => {
+    const workspace = workspaceRef.current;
+    if (workspace && window.matchMedia("(max-width: 760px)").matches && workspace.getBoundingClientRect().top < 0) {
+      window.scrollTo(0, window.scrollY + workspace.getBoundingClientRect().top);
+    }
+  }, [mobilePane]);
 
   useEffect(() => {
     api.preloadRuntime()
@@ -97,6 +108,7 @@ export default function Solve({
     setRunResult(null);
     setErr("");
     setP(null);
+    setMobilePane("problem");
     api.problem(id).then((d) => {
       if (cancelled) return;
       setP(d);
@@ -150,13 +162,17 @@ export default function Solve({
   const missing = Boolean(p.statement_incomplete);
 
   return (
-    <div className="page exam">
+    <div ref={workspaceRef} className={`page exam mobile-pane-${mobilePane}`}>
+      <div className="solve-tabs" role="group" aria-label="Workspace view">
+        <button type="button" aria-pressed={mobilePane === "problem"} aria-controls="problem-statement" onClick={() => setMobilePane("problem")}>Problem</button>
+        <button type="button" aria-pressed={mobilePane === "code"} aria-controls="code-workspace" onClick={() => setMobilePane("code")}>Code &amp; results</button>
+      </div>
       <div className="exam-body">
-        <aside className="problem-pane" tabIndex={0} aria-label="Problem statement">
+        <aside id="problem-statement" className="problem-pane" tabIndex={0} aria-label="Problem statement">
           <div className="brief-head">
             <div className="brief-chips">
               <span className="chip chip-src">{p.source_label}</span>
-              {p.source_difficulty ? <span className="chip chip-diff">{p.source_difficulty}</span> : null}
+              {p.source_difficulty ? <Difficulty source={p.source} label={p.source_difficulty} /> : null}
               <span className="chip chip-limit">Time {p.time_limit_ms}ms</span>
               <span className="chip chip-limit">Memory {p.memory_limit_mb}MB</span>
             </div>
@@ -217,7 +233,7 @@ export default function Solve({
             </p>
           ) : null}
         </aside>
-        <section className="ide">
+        <section id="code-workspace" className="ide" aria-label="Code workspace">
           <div className="ide-bar">
             <span className="ide-label">EDITOR</span>
             <span className="lang-pill">{PYTHON_LANGUAGE.label}</span>
@@ -240,7 +256,11 @@ export default function Solve({
               value={code}
               onChange={(v) => setCode(v || "")}
               options={{
-                fontSize: 14,
+                fontSize: 16,
+                automaticLayout: true,
+                lineNumbersMinChars: 3,
+                glyphMargin: false,
+                scrollBeyondLastLine: false,
                 minimap: { enabled: false },
                 overviewRulerLanes: 0,
                 overviewRulerBorder: false,
@@ -254,12 +274,12 @@ export default function Solve({
           } output={<div className="io" id="editor-io">
             <p className="runtime-note">
               {runtimeReady
-                ? "Run is for practice. Only Submit is saved to History."
+                ? "Only Submit is saved to History."
                 : "Preparing the runner..."}
             </p>
             <label>
               <span className="io-label">Standard input</span>
-              <textarea value={stdin} onChange={(e) => setStdin(e.target.value)} />
+              <AutoGrowTextarea value={stdin} onChange={(e) => setStdin(e.target.value)} />
             </label>
             <div className="result">
               {err ? <div className="error" role="alert">{err}</div> : null}
