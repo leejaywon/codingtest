@@ -5,6 +5,8 @@ import { AuthUser, api, ProblemDetail } from "../api";
 import EditorSplit from "../components/EditorSplit";
 import AutoGrowTextarea from "../components/AutoGrowTextarea";
 import Difficulty from "../components/Difficulty";
+import FavoriteButton from "../components/FavoriteButton";
+import WorkspaceResizer from "../components/WorkspaceResizer";
 import { PYTHON_LANGUAGE } from "../data/catalog";
 import { verdictLabel } from "../lib/verdicts";
 
@@ -83,11 +85,20 @@ export default function Solve({
   const [stdin, setStdin] = useState("");
   const [busy, setBusy] = useState(false);
   const [mobilePane, setMobilePane] = useState<"problem" | "code">("problem");
+  const [isMobileEditor, setIsMobileEditor] = useState(false);
   const workspaceRef = useRef<HTMLDivElement>(null);
   const [runtimeReady, setRuntimeReady] = useState(false);
   const [err, setErr] = useState("");
+  const [favoriteError, setFavoriteError] = useState("");
+  const [favoritePendingId, setFavoritePendingId] = useState<string | null>(null);
+  const activeProblemIdRef = useRef(id);
+  activeProblemIdRef.current = id;
   const [runResult, setRunResult] = useState<Awaited<ReturnType<typeof api.run>> | null>(null);
   const [judge, setJudge] = useState<Awaited<ReturnType<typeof api.submit>> | null>(null);
+  const editorFontSize = isMobileEditor ? 14 : 11;
+  const editorLineHeight = isMobileEditor ? 20 : 19;
+  const editorLineCount = code.split(/\r\n|\r|\n/).length;
+  const editorHeight = isMobileEditor ? `${editorLineCount * editorLineHeight + 24}px` : "100%";
 
   useLayoutEffect(() => {
     const workspace = workspaceRef.current;
@@ -103,10 +114,20 @@ export default function Solve({
   }, []);
 
   useEffect(() => {
+    const mobile = window.matchMedia("(max-width: 760px)");
+    const syncEditorLayout = () => setIsMobileEditor(mobile.matches);
+    syncEditorLayout();
+    mobile.addEventListener("change", syncEditorLayout);
+    return () => mobile.removeEventListener("change", syncEditorLayout);
+  }, []);
+
+  useEffect(() => {
     let cancelled = false;
     setJudge(null);
     setRunResult(null);
     setErr("");
+    setFavoriteError("");
+    setFavoritePendingId(null);
     setP(null);
     setMobilePane("problem");
     api.problem(id).then((d) => {
@@ -123,6 +144,25 @@ export default function Solve({
   }, [id]);
 
   const statementHtml = useMemo(() => englishSectionLabels(p?.statement_html || ""), [p?.statement_html]);
+
+  async function toggleFavorite() {
+    if (!p || favoritePendingId === p.id) return;
+    const problemId = p.id;
+    const previous = p.favorite;
+    setFavoriteError("");
+    setFavoritePendingId(problemId);
+    setP((current) => (current ? { ...current, favorite: !previous } : current));
+    try {
+      await api.setProblemFavorite(problemId, !previous);
+    } catch (e) {
+      setP((current) => (current?.id === problemId ? { ...current, favorite: previous } : current));
+      if (activeProblemIdRef.current === problemId) {
+        setFavoriteError(e instanceof Error ? e.message : "즐겨찾기를 저장하지 못했습니다. 다시 시도해 주세요.");
+      }
+    } finally {
+      setFavoritePendingId((current) => (current === problemId ? null : current));
+    }
+  }
 
   async function run() {
     if (!p) return;
@@ -176,7 +216,16 @@ export default function Solve({
               <span className="chip chip-limit">Time {p.time_limit_ms}ms</span>
               <span className="chip chip-limit">Memory {p.memory_limit_mb}MB</span>
             </div>
-            <h1>{p.title}</h1>
+            <div className="problem-title-row">
+              <h1>{p.title}</h1>
+              <FavoriteButton
+                favorite={p.favorite}
+                label={p.title}
+                pending={favoritePendingId === p.id}
+                onToggle={toggleFavorite}
+              />
+            </div>
+            {favoriteError ? <p className="problem-favorite-error" role="alert">{favoriteError}</p> : null}
             <div className="type-block">
               <div className="type-row">
                 <span className="type-k">Source tags</span>
@@ -233,6 +282,7 @@ export default function Solve({
             </p>
           ) : null}
         </aside>
+        <WorkspaceResizer />
         <section id="code-workspace" className="ide" aria-label="Code workspace">
           <div className="ide-bar">
             <span className="ide-label">EDITOR</span>
@@ -249,14 +299,15 @@ export default function Solve({
           </div>
           <EditorSplit editor={<div className="editor">
             <Editor
-              height="100%"
+              height={editorHeight}
               language="python"
               theme="codingtest"
               beforeMount={prepareEditor}
               value={code}
               onChange={(v) => setCode(v || "")}
               options={{
-                fontSize: 16,
+                fontSize: editorFontSize,
+                lineHeight: editorLineHeight,
                 automaticLayout: true,
                 lineNumbersMinChars: 3,
                 glyphMargin: false,
@@ -267,21 +318,34 @@ export default function Solve({
                 hideCursorInOverviewRuler: true,
                 tabSize: 4,
                 padding: { top: 12, bottom: 12 },
-                scrollbar: { verticalScrollbarSize: 12, horizontalScrollbarSize: 12 },
+                scrollbar: {
+                  vertical: isMobileEditor ? "hidden" : "auto",
+                  handleMouseWheel: !isMobileEditor,
+                  alwaysConsumeMouseWheel: !isMobileEditor,
+                  verticalScrollbarSize: 12,
+                  horizontalScrollbarSize: 12,
+                },
               }}
             />
           </div>
           } output={<div className="io" id="editor-io">
-            <p className="runtime-note">
-              {runtimeReady
-                ? "Only Submit is saved to History."
-                : "Preparing the runner..."}
-            </p>
             <label>
               <span className="io-label">Standard input</span>
               <AutoGrowTextarea value={stdin} onChange={(e) => setStdin(e.target.value)} />
             </label>
             <div className="result">
+              {!err && !judge && !runResult ? (
+                <div className="result-guidance">
+                  {!busy ? (
+                    <p className="runtime-note">
+                      {runtimeReady
+                        ? "Only Submit is saved to History."
+                        : "Preparing the runner..."}
+                    </p>
+                  ) : null}
+                  <p className="result-placeholder" role="status">{busy ? "Running…" : "Run or submit to see results."}</p>
+                </div>
+              ) : null}
               {err ? <div className="error" role="alert">{err}</div> : null}
               {judge ? (
                 <div>
@@ -289,7 +353,6 @@ export default function Solve({
                     <strong className={`v-${judge.verdict}`}>{verdictLabel(judge.verdict)}</strong>
                     <span>{judge.passed}/{judge.total} samples</span>
                     <span>{judge.time_ms} ms</span>
-                    <span className="sample-status">Sample</span>
                   </div>
                   <table className="case-table">
                     <thead>
@@ -316,19 +379,12 @@ export default function Solve({
                   <div className="result-summary" role="status">
                     <strong className={`v-${runResult.verdict}`}>{verdictLabel(runResult.verdict === "OK" ? "OK" : runResult.verdict)}</strong>
                     <span>{runResult.time_ms} ms</span>
-                    {runResult.sample_match !== null ? (
-                      <span className={`sample-status ${runResult.sample_match ? "match" : "mismatch"}`}>
-                        {runResult.sample_match ? "Sample match" : "Sample mismatch"}
-                      </span>
-                    ) : null}
                   </div>
                   <OutputChannel label="Standard output" text={runResult.stdout} />
                   {runResult.stderr ? <OutputChannel label="Standard error" text={runResult.stderr} /> : null}
                   {runResult.compile_log ? <OutputChannel label="Compiler output" text={runResult.compile_log} /> : null}
                 </>
-              ) : (
-                !err && <p className="result-placeholder" role="status">{busy ? "Running…" : "Run or submit to see results."}</p>
-              )}
+              ) : null}
             </div>
           </div>} />
         </section>
