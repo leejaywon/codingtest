@@ -1,8 +1,9 @@
-import { useEffect, useMemo, useState } from "react";
+import { useEffect, useMemo, useRef, useState } from "react";
 import { Link, useSearchParams } from "react-router-dom";
 import { AuthUser, api, ProblemListItem } from "../api";
 import Select from "../components/Select";
 import Difficulty from "../components/Difficulty";
+import FavoriteButton, { FavoriteStarIcon } from "../components/FavoriteButton";
 
 function join(values: string[]) {
   return values.length ? values.join(", ") : "–";
@@ -28,7 +29,7 @@ function difficultyRank(p: ProblemListItem): number | null {
 type DiffSort = "off" | "asc" | "desc";
 
 export default function Problems({
-  user: _user,
+  user,
   onLogout: _onLogout,
 }: {
   user: AuthUser;
@@ -42,6 +43,10 @@ export default function Problems({
   const our = params.get("type") || "all";
   const [err, setErr] = useState("");
   const [diffSort, setDiffSort] = useState<DiffSort>("off");
+  const [favoriteError, setFavoriteError] = useState("");
+  const [pendingFavorites, setPendingFavorites] = useState<Set<string>>(() => new Set());
+  const favoriteOnly = params.get("favorites") === "1";
+  const favoriteFilterRef = useRef<HTMLButtonElement>(null);
 
   function setOur(value: string) {
     const next = new URLSearchParams(params);
@@ -50,18 +55,36 @@ export default function Problems({
     setParams(next, { replace: true });
   }
 
+  function setFavoriteOnly(value: boolean) {
+    const next = new URLSearchParams(params);
+    if (value) next.set("favorites", "1");
+    else next.delete("favorites");
+    setParams(next, { replace: true });
+  }
+
   useEffect(() => {
+    let cancelled = false;
+    setItems([]);
+    setErr("");
+    setFavoriteError("");
     api
       .problems()
       .then((r) => {
+        if (cancelled) return;
         setItems(r.items);
         setCatalogTypes(r.catalog_types || []);
       })
-      .catch((e) => setErr(e.message));
-  }, []);
+      .catch((e) => {
+        if (!cancelled) setErr(e.message);
+      });
+    return () => {
+      cancelled = true;
+    };
+  }, [user.id]);
 
   const filtered = useMemo(() => {
     const rows = items.filter((p) => {
+      if (favoriteOnly && !p.favorite) return false;
       if (src !== "all" && p.source !== src) return false;
       if (our !== "all" && !(p.our_types || []).includes(our)) return false;
       if (!q.trim()) return true;
@@ -85,7 +108,49 @@ export default function Problems({
       if (ra !== rb) return (ra - rb) * dir;
       return a.title.localeCompare(b.title, "ko");
     });
-  }, [items, q, src, our, diffSort]);
+  }, [items, q, src, our, diffSort, favoriteOnly]);
+
+  async function toggleFavorite(problem: ProblemListItem) {
+    if (pendingFavorites.has(problem.id)) return;
+    const nextFavorite = !problem.favorite;
+    const rowIndex = filtered.findIndex((row) => row.id === problem.id);
+    const focusId = filtered[rowIndex + 1]?.id || filtered[rowIndex - 1]?.id;
+    setFavoriteError("");
+    setPendingFavorites((current) => new Set(current).add(problem.id));
+    setItems((current) =>
+      current.map((row) => (row.id === problem.id ? { ...row, favorite: nextFavorite } : row)),
+    );
+
+    if (favoriteOnly && !nextFavorite) {
+      requestAnimationFrame(() => {
+        const visibleButton = Array.from(
+          document.querySelectorAll<HTMLButtonElement>("button[data-favorite-id]"),
+        ).find((button) => button.dataset.favoriteId === focusId && button.getClientRects().length > 0);
+        (visibleButton || favoriteFilterRef.current)?.focus();
+      });
+    }
+
+    try {
+      await api.setProblemFavorite(problem.id, nextFavorite);
+    } catch (e) {
+      setItems((current) =>
+        current.map((row) => (row.id === problem.id ? { ...row, favorite: problem.favorite } : row)),
+      );
+      setFavoriteError(e instanceof Error ? e.message : "즐겨찾기를 저장하지 못했습니다. 다시 시도해 주세요.");
+      requestAnimationFrame(() => {
+        const restoredButton = Array.from(
+          document.querySelectorAll<HTMLButtonElement>("button[data-favorite-id]"),
+        ).find((button) => button.dataset.favoriteId === problem.id && button.getClientRects().length > 0);
+        restoredButton?.focus();
+      });
+    } finally {
+      setPendingFavorites((current) => {
+        const next = new Set(current);
+        next.delete(problem.id);
+        return next;
+      });
+    }
+  }
 
   function cycleDiffSort() {
     setDiffSort((s) => (s === "off" ? "asc" : s === "asc" ? "desc" : "off"));
@@ -116,8 +181,20 @@ export default function Problems({
               ...catalogTypes.map((t) => ({ value: t, label: t })),
             ]}
           />
+          <button
+            ref={favoriteFilterRef}
+            type="button"
+            className={`favorite-filter-btn${favoriteOnly ? " on" : ""}`}
+            aria-label={favoriteOnly ? "즐겨찾기 필터 해제" : "즐겨찾기 문제만 보기"}
+            aria-pressed={favoriteOnly}
+            title={favoriteOnly ? "모든 문제 보기" : "즐겨찾기만 보기"}
+            onClick={() => setFavoriteOnly(!favoriteOnly)}
+          >
+            <FavoriteStarIcon />
+          </button>
         </div>
         {err ? <div className="error">{err}</div> : null}
+        {favoriteError ? <div className="favorite-error" role="alert">{favoriteError}</div> : null}
         <div className="mobile-problem-tools">
           <span role="status">{filtered.length} problems</span>
           <button type="button" onClick={cycleDiffSort}>
@@ -127,18 +204,27 @@ export default function Problems({
         <ul className="problem-cards" aria-label="문제 목록">
           {filtered.map((p) => (
             <li key={p.id}>
-              <Link className="problem-card" to={`/problems/${p.id}`}>
-                <span className="problem-card-meta">
-                  <span className="src">{p.source_label}</span>
-                  <Difficulty source={p.source} label={p.source_difficulty} />
-                  <span className={`st st-${p.status}`}>
-                    {p.status === "solved" ? "맞음" : p.status === "tried" ? "시도" : "미풀이"}
+              <div className="problem-card-shell">
+                <FavoriteButton
+                  favorite={p.favorite}
+                  label={p.title}
+                  pending={pendingFavorites.has(p.id)}
+                  onToggle={() => toggleFavorite(p)}
+                  dataFavoriteId={p.id}
+                />
+                <Link className="problem-card" to={`/problems/${p.id}`}>
+                  <span className="problem-card-meta">
+                    <span className="src">{p.source_label}</span>
+                    <Difficulty source={p.source} label={p.source_difficulty} />
+                    <span className={`st st-${p.status}`}>
+                      {p.status === "solved" ? "맞음" : p.status === "tried" ? "시도" : "미풀이"}
+                    </span>
                   </span>
-                </span>
-                <strong>{p.title}<span aria-hidden="true">›</span></strong>
-                <span className="problem-card-topics">{join(p.our_types || [])}</span>
-                {p.source_tags?.length ? <span className="problem-card-tags">사이트 유형 · {join(p.source_tags)}</span> : null}
-              </Link>
+                  <strong>{p.title}<span aria-hidden="true">›</span></strong>
+                  <span className="problem-card-topics">{join(p.our_types || [])}</span>
+                  {p.source_tags?.length ? <span className="problem-card-tags">사이트 유형 · {join(p.source_tags)}</span> : null}
+                </Link>
+              </div>
             </li>
           ))}
         </ul>
@@ -146,6 +232,7 @@ export default function Problems({
           <table className="prob-table">
             <thead>
               <tr>
+                <th className="favorite-column"><span className="favorite-column-label">즐겨찾기</span></th>
                 <th>상태</th>
                 <th>출처</th>
                 <th>
@@ -185,6 +272,15 @@ export default function Problems({
             <tbody>
               {filtered.map((p) => (
                 <tr key={p.id}>
+                  <td className="favorite-column">
+                    <FavoriteButton
+                      favorite={p.favorite}
+                      label={p.title}
+                      pending={pendingFavorites.has(p.id)}
+                      onToggle={() => toggleFavorite(p)}
+                      dataFavoriteId={p.id}
+                    />
+                  </td>
                   <td>
                     <span className={`st st-${p.status}`}>
                       {p.status === "solved" ? "맞음" : p.status === "tried" ? "시도" : "–"}
@@ -206,7 +302,13 @@ export default function Problems({
         </div>
         {filtered.length === 0 ? (
           <p className="muted empty-hint">
-            {items.length ? "검색 조건에 맞는 문제가 없습니다." : "No problems yet."}
+            {items.length
+              ? favoriteOnly
+                ? items.some((item) => item.favorite)
+                  ? "검색 조건에 맞는 즐겨찾기 문제가 없습니다."
+                  : "즐겨찾기한 문제가 없습니다. 문제 옆 별표를 눌러 추가하세요."
+                : "검색 조건에 맞는 문제가 없습니다."
+              : "No problems yet."}
           </p>
         ) : null}
       </main>

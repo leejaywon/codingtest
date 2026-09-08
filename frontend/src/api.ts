@@ -47,6 +47,7 @@ export type ProblemListItem = {
   source_url: string;
   status: string;
   judge_mode: string;
+  favorite: boolean;
 };
 
 export type Sample = { input: string; output: string; hidden?: boolean };
@@ -160,7 +161,7 @@ function codeforcesTitle(row: ProblemRow) {
   return `${official}. ${row.title.replace(/^[A-Z]\d*\.\s*/i, "").trim() || row.title}`;
 }
 
-function mapListItem(row: ProblemRow, status = "todo"): ProblemListItem {
+function mapListItem(row: ProblemRow, status = "todo", favorite = false): ProblemListItem {
   const source_tags = asStringList(row.source_tags).length ? asStringList(row.source_tags) : asStringList(row.tags);
   return {
     id: row.id,
@@ -177,14 +178,15 @@ function mapListItem(row: ProblemRow, status = "todo"): ProblemListItem {
     source_url: row.source_url || "",
     status,
     judge_mode: row.judge_mode || "stdin",
+    favorite,
   };
 }
 
-function mapDetail(row: ProblemRow, status = "todo"): ProblemDetail {
+function mapDetail(row: ProblemRow, status = "todo", favorite = false): ProblemDetail {
   const samples = (row.samples_json || []).filter((s) => !s.hidden);
   const html = row.statement_html || "";
   return {
-    ...mapListItem(row, status),
+    ...mapListItem(row, status, favorite),
     statement_html: html,
     input_spec: row.input_spec || "",
     output_spec: row.output_spec || "",
@@ -377,17 +379,40 @@ export const api = {
   problems: async () => {
     const sessionUser = await currentSessionUser();
     const sb = requireSupabase();
-    const { data, error } = await sb
-      .from("problems")
-      .select(
-        "id, source, source_id, source_url, title, difficulty, source_difficulty, source_tags, tags, our_types, time_limit_ms, memory_limit_mb, judge_mode",
-      )
-      .order("sort_order", { ascending: true })
-      .order("id", { ascending: true });
-    if (error) failUnknown();
-    const progress = await solvedMap(sessionUser.id);
-    const items = (data || []).map((row) => mapListItem(row as ProblemRow, progress[row.id] || "todo"));
+    const [problemResult, progress, favoriteResult] = await Promise.all([
+      sb
+        .from("problems")
+        .select(
+          "id, source, source_id, source_url, title, difficulty, source_difficulty, source_tags, tags, our_types, time_limit_ms, memory_limit_mb, judge_mode",
+        )
+        .order("sort_order", { ascending: true })
+        .order("id", { ascending: true }),
+      solvedMap(sessionUser.id),
+      sb.from("problem_favorites").select("problem_id").eq("user_id", sessionUser.id),
+    ]);
+    if (problemResult.error || favoriteResult.error) failUnknown();
+    const favoriteIds = new Set((favoriteResult.data || []).map((row) => row.problem_id));
+    const items = (problemResult.data || []).map((row) =>
+      mapListItem(row as ProblemRow, progress[row.id] || "todo", favoriteIds.has(row.id)),
+    );
     return { items, languages: [{ ...PYTHON_LANGUAGE }], catalog_types: [...OUR_TYPES] };
+  },
+
+  setProblemFavorite: async (problemId: string, favorite: boolean) => {
+    const sessionUser = await currentSessionUser();
+    const sb = requireSupabase();
+    const result = favorite
+      ? await sb
+          .from("problem_favorites")
+          .insert({ user_id: sessionUser.id, problem_id: problemId })
+      : await sb
+          .from("problem_favorites")
+          .delete()
+          .eq("user_id", sessionUser.id)
+          .eq("problem_id", problemId);
+    if (result.error && !(favorite && result.error.code === "23505")) {
+      fail("즐겨찾기를 저장하지 못했습니다. 다시 시도해 주세요.");
+    }
   },
 
   problem: async (id: string) => {
@@ -396,8 +421,17 @@ export const api = {
     const { data, error } = await sb.from("problems").select("*").eq("id", id).maybeSingle();
     if (error) failUnknown();
     if (!data) fail("문제를 찾을 수 없습니다");
-    const progress = await solvedMap(sessionUser.id);
-    return mapDetail(data as ProblemRow, progress[id] || "todo");
+    const [progress, favoriteResult] = await Promise.all([
+      solvedMap(sessionUser.id),
+      sb
+        .from("problem_favorites")
+        .select("problem_id")
+        .eq("user_id", sessionUser.id)
+        .eq("problem_id", id)
+        .maybeSingle(),
+    ]);
+    if (favoriteResult.error) failUnknown();
+    return mapDetail(data as ProblemRow, progress[id] || "todo", Boolean(favoriteResult.data));
   },
 
   run: async (body: { problem_id: string; language: string; source: string; stdin: string }): Promise<RunOnceResult> => {
